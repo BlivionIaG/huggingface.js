@@ -48,3 +48,9 @@ Then point the menu at the mock hub:
 ```bash
 pnpm --filter @huggingface/hub quant-variants -- org/model --hub-url http://localhost:8787
 ```
+
+Or let the menu start the mock hub for the time of the script:
+
+```bash
+pnpm --filter @huggingface/hub quant-variants -- org/model --offline
+```

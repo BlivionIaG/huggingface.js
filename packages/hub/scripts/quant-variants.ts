@@ -6,13 +6,15 @@
  * were published for it (`Qwen/Qwen3.8-27B-FP8` and friends).
  *
  * The menu is read from the Hub. To read it from the local mock hub instead, start it with
- * `pnpm --filter @huggingface/hub mock-hub` and pass `--hub-url http://localhost:8787`.
+ * `pnpm --filter @huggingface/hub mock-hub` and pass `--hub-url http://localhost:8787`, or pass
+ * `--offline` to start the mock hub for the time of the script.
  *
  * Usage:
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --hardware "RTX 4090"
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --html menu.html
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --hub-url http://localhost:8787
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --offline
  */
 
 import {
@@ -27,6 +29,7 @@ import { parseArgs } from "node:util";
 import { writeFile } from "node:fs/promises";
 import { listQuantVariants } from "../src/lib/list-quant-variants.js";
 import { stripArgumentSeparator } from "./args.js";
+import { startMockHub } from "./mock-hub.js";
 
 stripArgumentSeparator();
 
@@ -39,6 +42,7 @@ const { values, positionals } = parseArgs({
 		all: { type: "boolean" },
 		limit: { type: "string" },
 		"hub-url": { type: "string" },
+		offline: { type: "boolean" },
 		html: { type: "string" },
 	},
 });
@@ -46,7 +50,7 @@ const { values, positionals } = parseArgs({
 const model = positionals[0];
 if (!model) {
 	console.error(
-		"Usage: pnpm --filter @huggingface/hub quant-variants -- <model> [--hardware <name>] [--memory <GB>] [--context <tokens>] [--all] [--limit <n>] [--hub-url <url>] [--html <file>]",
+		"Usage: pnpm --filter @huggingface/hub quant-variants -- <model> [--hardware <name>] [--memory <GB>] [--context <tokens>] [--all] [--limit <n>] [--hub-url <url>] [--offline] [--html <file>]",
 	);
 	process.exit(1);
 }
@@ -86,11 +90,16 @@ async function main() {
 		hardware = { name: "custom", memoryBytes: Number(values.memory) * 1e9 };
 	}
 
+	// The mock hub serves the fixtures of the Hub, so that the menu can be read without the
+	// network, and without a second terminal. It listens on a random port, so that it does not
+	// clash with a mock hub that is already running.
+	const hub = values.offline ? await startMockHub({ port: 0 }) : undefined;
+
 	const rows = await listQuantVariants({
 		name: model,
 		authors: values.all ? [] : "same",
 		limit: values.limit ? Number(values.limit) : undefined,
-		hubUrl: values["hub-url"],
+		hubUrl: values["hub-url"] ?? hub?.url,
 	});
 
 	const groups = new Map<number, QuantVariantRow[]>();
@@ -135,6 +144,8 @@ async function main() {
 		await writeFile(values.html, renderHtml(rows, { hardware, contextLength }), "utf8");
 		console.log(`\nWidget mock written to ${values.html}`);
 	}
+
+	await hub?.close();
 }
 
 function escapeHtml(value: string): string {
