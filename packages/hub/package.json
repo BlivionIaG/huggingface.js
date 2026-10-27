@@ -59,7 +59,8 @@
 		"check": "tsc",
 		"build:xet-wasm": "./scripts/build-xet-wasm.sh -t bundler --clean",
 		"bench": "tsx scripts/bench.ts",
-		"debug-xet": "tsx scripts/debug-xet.ts"
+		"debug-xet": "tsx scripts/debug-xet.ts",
+		"quant-variants": "tsx scripts/quant-variants.ts"
 	},
 	"dependencies": {
 		"@huggingface/tasks": "workspace:^",

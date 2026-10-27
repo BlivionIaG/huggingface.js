@@ -64,10 +64,14 @@ const ggufQuants = Object.values(GGMLFileQuantizationType).filter((v): v is stri
  * https://github.com/ggml-org/llama.cpp/blob/master/conversion/gpt_oss.py. So the canonical releases
  * are `gpt-oss-{20b,120b}-MXFP4.gguf`, which no `GGMLFileQuantizationType` name matches.
  *
- * Appended last so `MXFP4_MOE` still wins the alternation, instead of matching as `MXFP4` with
- * sizeVariation `MOE`.
+ * `Q8_K` is a `GGMLQuantizationType`, but not a `GGMLFileQuantizationType`: the files of a repo
+ * hold the tensors of a single type, and a `Q8_K` file holds `Q8_K` tensors. Unsloth publishes
+ * those as `Q8_K` and `Q8_K_XL` (the latter is a custom type, and so already matched).
+ *
+ * Appended last so `MXFP4_MOE` and `Q8_K_XL` still win the alternation, instead of matching as
+ * `MXFP4` with sizeVariation `MOE`, or as `Q8_K` with sizeVariation `XL`.
  */
-const GGUF_QUANT_FILENAME_ALIASES = ["MXFP4"];
+const GGUF_QUANT_FILENAME_ALIASES = ["MXFP4", "Q8_K"];
 export const GGUF_QUANT_RE = new RegExp(
 	"(?<prefix>UD-)?" +
 		`(?<quant>${[...ggufQuants, ...GGUF_QUANT_FILENAME_ALIASES].join("|")})` +

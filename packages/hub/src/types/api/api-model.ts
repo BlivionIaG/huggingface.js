@@ -37,7 +37,23 @@ export interface ApiModelInfo {
 		parameters: Record<string, number>;
 		total: number;
 	};
-	siblings: Array<{ rfilename: string }>;
+	/**
+	 * Metadata of the GGUF file of the repo, when the repo holds one.
+	 */
+	gguf?: {
+		total: number;
+		architecture?: string;
+		context_length?: number;
+		chat_template?: string;
+		bos_token?: string;
+		eos_token?: string;
+		totalFileSize?: number;
+	};
+	/**
+	 * Size of the whole repo, in bytes.
+	 */
+	usedStorage?: number;
+	siblings: Array<{ rfilename: string; size?: number; blobId?: string }>;
 	transformersInfo?: TransformersInfo;
 }
 

@@ -47,6 +47,7 @@ export type {
 export { SPECIAL_TOKENS_ATTRIBUTES } from "./tokenizer-data.js";
 
 export * from "./gguf.js";
+export * from "./quant-variants.js";
 
 export {
 	type InferenceSnippet,
