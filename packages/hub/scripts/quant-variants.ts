@@ -20,6 +20,7 @@ import {
 	computeFit,
 	formatBytes,
 	getQuantVariantMemoryRequirement,
+	type HardwareSpec,
 	type QuantVariantRow,
 } from "@huggingface/tasks";
 import { parseArgs } from "node:util";
@@ -57,7 +58,9 @@ interface Hardware {
 }
 
 function findHardware(name: string): Hardware | undefined {
-	for (const vendors of Object.values(SKUS)) {
+	// The SKUs of the vendors have different specs, but they all extend the `HardwareSpec`.
+	const groups = Object.values(SKUS) as Array<Record<string, Record<string, HardwareSpec>>>;
+	for (const vendors of groups) {
 		for (const [vendor, skus] of Object.entries(vendors)) {
 			for (const [sku, spec] of Object.entries(skus)) {
 				if (sku.toLowerCase() === name.toLowerCase() || sku.toLowerCase().includes(name.toLowerCase())) {
