@@ -222,13 +222,16 @@ function getRowsForRepo(info: ApiModelInfo, contextLength?: number, kvCacheBytes
  * Lists the quantized variants of a model, as the rows of the quantization menu of a model page.
  *
  * The rows cover the base model itself and every quantization published for it: the GGUF
- * quantizations of a GGUF repo (one row per `.gguf` file) and the quantized repos published
+ * quantizations of a GGUF repo (one row per quantization) and the quantized repos published
  * for the model (`Qwen/Qwen3.8-27B-FP8` and friends).
  *
  * @example
  * ```ts
  * const rows = await listQuantVariants({ name: "Qwen/Qwen3.8-27B" });
- * // => [{ id: "Qwen/Qwen3.8-27B", label: "BF16", sizeBytes: 55646414848, ... }, ...]
+ * // => [
+ * //   { id: "Qwen/Qwen3.8-27B-FP8", label: "FP8", bits: 8, sizeBytes: 30879676248, ... },
+ * //   { id: "Qwen/Qwen3.8-27B", label: "BF16", bits: 16, sizeBytes: 55646414848, ... },
+ * // ]
  * ```
  */
 export async function listQuantVariants(
