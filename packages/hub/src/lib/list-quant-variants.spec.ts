@@ -35,7 +35,7 @@ describe("listQuantVariants", () => {
 		const base = rows.find((row) => row.id === "Qwen/Qwen3.8-27B");
 		expect(base?.contextLength).toBe(262144);
 		// 16 full attention layers, 4 kv heads, 256 head dim, 2 bytes, K and V
-		expect(base?.kvCacheBytesPerToken).toBe(65536);
+		expect(base?.kvCache?.bytesPerToken).toBe(65536);
 	});
 
 	it("should only list the variants of the author of the model by default", async () => {

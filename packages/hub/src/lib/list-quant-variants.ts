@@ -3,10 +3,11 @@ import {
 	describeBaseVariant,
 	getGGUFQuantBits,
 	getGGUFVariantRows,
-	kvCacheBytesPerToken,
+	getKvCacheSpec,
 	parseQuantVariantDescriptor,
 	sumWeightFileSizes,
 	type AttentionConfig,
+	type KvCacheSpec,
 	type QuantVariantRow,
 } from "@huggingface/tasks";
 import { HUB_URL } from "../consts";
@@ -173,13 +174,29 @@ function getDominantDtype(info: ApiModelInfo): string | undefined {
 }
 
 /**
- * Builds the rows of a repo: one row per `.gguf` file for a GGUF repo, one row for the whole
+ * Whether a repo holds an adapter instead of a model.
+ *
+ * A PEFT adapter holds the weights of the layers it trains, not the whole model, and its size
+ * says nothing about the memory a model needs.
+ */
+function isAdapterRepo(files: ApiModelInfo["siblings"]): boolean {
+	return (files ?? []).some((file) => file.rfilename === "adapter_config.json");
+}
+
+/**
+ * Builds the rows of a repo: one row per quantization for a GGUF repo, one row for the whole
  * repo otherwise.
  *
+ * @param isBaseModel whether the repo is the model the menu is for, and not one of its variants
  * @param contextLength maximum context length of the model, shared by every quantization
- * @param kvCacheBytesPerToken size of the KV cache per token, shared by every quantization
+ * @param kvCache KV cache of the model, shared by every quantization
  */
-function getRowsForRepo(info: ApiModelInfo, contextLength?: number, kvCacheBytesPerToken?: number): QuantVariantRow[] {
+function getRowsForRepo(
+	info: ApiModelInfo,
+	isBaseModel: boolean,
+	contextLength?: number,
+	kvCache?: KvCacheSpec,
+): QuantVariantRow[] {
 	const files = info.siblings ?? [];
 
 	const ggufRows = getGGUFVariantRows(info.id, files);
@@ -189,13 +206,20 @@ function getRowsForRepo(info: ApiModelInfo, contextLength?: number, kvCacheBytes
 			bits: getGGUFQuantBits(row.label),
 			totalParams: info.safetensors?.total ?? info.gguf?.total,
 			contextLength: info.gguf?.context_length ?? contextLength,
-			kvCacheBytesPerToken,
+			kvCache,
 			downloads: info.downloads,
 			likes: info.likes,
 		}));
 	}
 
-	const descriptor = parseQuantVariantDescriptor(info.id) ?? describeBaseVariant(getDominantDtype(info));
+	// A variant of a model is a quantization: a fine-tune or an adapter is not one, and the
+	// dtype of the weights of a fine-tune says nothing about the memory a model needs.
+	if (!isBaseModel && isAdapterRepo(files)) {
+		return [];
+	}
+
+	const descriptor =
+		parseQuantVariantDescriptor(info.id) ?? (isBaseModel ? describeBaseVariant(getDominantDtype(info)) : undefined);
 	if (!descriptor) {
 		return [];
 	}
@@ -211,7 +235,7 @@ function getRowsForRepo(info: ApiModelInfo, contextLength?: number, kvCacheBytes
 			sizeBytes: totalBytes,
 			totalParams: info.safetensors?.total,
 			contextLength,
-			kvCacheBytesPerToken,
+			kvCache,
 			downloads: info.downloads,
 			likes: info.likes,
 		},
@@ -253,15 +277,15 @@ export async function listQuantVariants(
 	const modelConfig = await fetchModelConfig(baseName, fetchParams);
 	const attentionConfig: AttentionConfig | undefined = attentionConfigFromModelConfig(modelConfig);
 	const contextLength = baseInfo.gguf?.context_length ?? attentionConfig?.maxPositionEmbeddings;
-	const kvCacheBytes = attentionConfig ? kvCacheBytesPerToken(attentionConfig) : undefined;
+	const kvCache = attentionConfig ? getKvCacheSpec(attentionConfig) : undefined;
 
-	const rows: QuantVariantRow[] = getRowsForRepo(baseInfo, contextLength, kvCacheBytes);
+	const rows: QuantVariantRow[] = getRowsForRepo(baseInfo, true, contextLength, kvCache);
 
 	const variantRepos = await findVariantRepos(baseName, authors, { ...fetchParams, limit });
 
 	for (const id of variantRepos) {
 		const details = await fetchModelInfo(id, fetchParams);
-		rows.push(...getRowsForRepo(details, contextLength, kvCacheBytes));
+		rows.push(...getRowsForRepo(details, false, contextLength, kvCache));
 	}
 
 	// The menu is ordered like the GGUF menu of a model page: the smallest quantizations

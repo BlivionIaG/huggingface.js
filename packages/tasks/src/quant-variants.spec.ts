@@ -7,6 +7,8 @@ import {
 	formatBytes,
 	getGGUFQuantBits,
 	getGGUFVariantRows,
+	getKvCacheBytes,
+	getKvCacheSpec,
 	getQuantVariantMemoryRequirement,
 	isWeightFile,
 	kvCacheBytesPerToken,
@@ -109,6 +111,45 @@ describe("sumWeightFileSizes", () => {
 
 		expect(totalBytes).toBe(100);
 		expect(files).toEqual([{ path: "model.safetensors", sizeBytes: 100 }]);
+	});
+
+	it("should sum the shards of a same file", () => {
+		const { totalBytes } = sumWeightFileSizes([
+			{ rfilename: "model-00001-of-00002.safetensors", size: 100 },
+			{ rfilename: "model-00002-of-00002.safetensors", size: 50 },
+		]);
+
+		expect(totalBytes).toBe(150);
+	});
+
+	it("should count one serialization of the weights only", () => {
+		// `pytorch_model.bin` is another serialization of the same weights
+		const { totalBytes } = sumWeightFileSizes([
+			{ rfilename: "model.safetensors", size: 100 },
+			{ rfilename: "pytorch_model.bin", size: 100 },
+		]);
+
+		expect(totalBytes).toBe(100);
+	});
+
+	it("should sum the shards of a file that is not named after the convention", () => {
+		// Some repos split their weights in `layers-<n>.safetensors`
+		const { totalBytes } = sumWeightFileSizes([
+			{ rfilename: "layers-0.safetensors", size: 100 },
+			{ rfilename: "layers-1.safetensors", size: 50 },
+		]);
+
+		expect(totalBytes).toBe(150);
+	});
+
+	it("should prefer the shards of a file over another serialization", () => {
+		const { totalBytes } = sumWeightFileSizes([
+			{ rfilename: "model.safetensors", size: 100 },
+			{ rfilename: "model-00001-of-00002.safetensors", size: 60 },
+			{ rfilename: "model-00002-of-00002.safetensors", size: 40 },
+		]);
+
+		expect(totalBytes).toBe(100);
 	});
 });
 
@@ -279,11 +320,73 @@ describe("kvCacheBytesPerToken", () => {
 	});
 });
 
+describe("getKvCacheSpec", () => {
+	it("should describe the kv cache of a model with full attention layers", () => {
+		const spec = getKvCacheSpec({
+			numHiddenLayers: 32,
+			numAttentionHeads: 32,
+			numKeyValueHeads: 8,
+			headDim: 128,
+		});
+
+		expect(spec?.bytesPerToken).toBe(131072);
+		expect(spec?.slidingWindowBytes).toBeUndefined();
+		expect(getKvCacheBytes(spec!, 4096)).toBe(131072 * 4096);
+	});
+
+	it("should keep the sliding attention layers in a bounded cache", () => {
+		const spec = getKvCacheSpec({
+			numHiddenLayers: 32,
+			numAttentionHeads: 32,
+			numKeyValueHeads: 8,
+			headDim: 128,
+			slidingWindow: 4096,
+			layerTypes: Array.from({ length: 32 }, (_, index) => (index % 4 === 3 ? "full_attention" : "sliding_attention")),
+		});
+
+		// 8 full attention layers
+		expect(spec?.bytesPerToken).toBe(2 * 8 * 8 * 128 * 2);
+		// 24 sliding attention layers, that only hold the last 4096 tokens
+		expect(spec?.slidingWindow).toBe(4096);
+		expect(spec?.slidingWindowBytes).toBe(2 * 24 * 8 * 128 * 2 * 4096);
+
+		// The cache doesn't grow with the context past the sliding window
+		expect(getKvCacheBytes(spec!, 8192)).toBe(spec!.bytesPerToken * 8192 + spec!.slidingWindowBytes!);
+	});
+
+	it("should treat the sliding layers as full attention when the window is disabled", () => {
+		const spec = getKvCacheSpec({
+			numHiddenLayers: 32,
+			numAttentionHeads: 32,
+			numKeyValueHeads: 8,
+			headDim: 128,
+			slidingWindow: 4096,
+			useSlidingWindow: false,
+			layerTypes: Array.from({ length: 32 }, (_, index) => (index % 4 === 3 ? "full_attention" : "sliding_attention")),
+		});
+
+		expect(spec?.bytesPerToken).toBe(2 * 32 * 8 * 128 * 2);
+		expect(spec?.slidingWindowBytes).toBeUndefined();
+	});
+
+	it("should not count the linear attention layers", () => {
+		const spec = getKvCacheSpec({
+			numHiddenLayers: 64,
+			numAttentionHeads: 24,
+			numKeyValueHeads: 4,
+			headDim: 256,
+			layerTypes: Array.from({ length: 64 }, (_, index) => (index % 4 === 3 ? "full_attention" : "linear_attention")),
+		});
+
+		expect(spec?.bytesPerToken).toBe(65536);
+	});
+});
+
 describe("estimateMemoryRequirement", () => {
 	it("should add the kv cache and the overhead to the weights", () => {
 		const requirement = estimateMemoryRequirement({
 			weightBytes: 30_879_676_248,
-			kvCacheBytesPerToken: 65536,
+			kvCache: { bytesPerToken: 65536 },
 			contextLength: 8192,
 			overheadRatio: 0.05,
 			minOverheadBytes: 0,
@@ -341,7 +444,7 @@ describe("getQuantVariantMemoryRequirement", () => {
 			bits: 8,
 			sizeBytes: 30_879_676_248,
 			contextLength: 4096,
-			kvCacheBytesPerToken: 65536,
+			kvCache: { bytesPerToken: 65536 },
 		});
 
 		expect(requirement.kvCacheBytes).toBe(65536 * 4096);
@@ -356,7 +459,7 @@ describe("getQuantVariantMemoryRequirement", () => {
 				bits: 8,
 				sizeBytes: 1000,
 				contextLength: 4096,
-				kvCacheBytesPerToken: 100,
+				kvCache: { bytesPerToken: 100 },
 			},
 			{ contextLength: 128 },
 		);

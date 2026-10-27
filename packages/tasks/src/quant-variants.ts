@@ -96,12 +96,12 @@ export interface QuantVariantRow {
 	 */
 	contextLength?: number;
 	/**
-	 * Size of the KV cache of the model, per token of context.
+	 * KV cache of the model.
 	 *
 	 * Every quantization of a model shares the same KV cache: it depends on the architecture,
 	 * not on the way the weights are stored.
 	 */
-	kvCacheBytesPerToken?: number;
+	kvCache?: KvCacheSpec;
 	/**
 	 * Number of downloads of the repo the artifact belongs to.
 	 */
@@ -285,10 +285,41 @@ export function getQuantVariantRole(path: string): QuantVariantRole {
 }
 
 /**
- * Sums the size of the weight files of a repo.
+ * Weight file formats, by priority.
+ *
+ * A repo can publish the same weights in several formats (`model.safetensors` and
+ * `pytorch_model.bin`): only one of them is the model, the others are alternative
+ * serializations of the same weights.
+ */
+const WEIGHT_FILE_PRIORITY = [".safetensors", ".gguf", ".exl3", ".bin", ".pt", ".pth", ".ckpt", ".npz"];
+
+/**
+ * Extension of the weight file of a path.
+ */
+function getWeightFileExtension(path: string): string {
+	const lower = path.toLowerCase();
+	return WEIGHT_FILE_PRIORITY.find((extension) => lower.endsWith(extension)) ?? "";
+}
+
+/**
+ * Key that identifies the shards of a same file.
+ *
+ * `model-00001-of-00002.safetensors` and `model-00002-of-00002.safetensors` are the two shards of
+ * a same file.
+ */
+function getShardKey(path: string): string {
+	return path.replace(/-\d{5}-of-\d{5}(?=\.[^./]+$)/i, "");
+}
+
+/**
+ * Sums the size of the weights of a repo.
  *
  * This is the exact size of the model as it is downloaded, which is the number a user compares
  * against the memory of their hardware.
+ *
+ * Only one serialization of the weights is counted: a repo that publishes both
+ * `model.safetensors` and `pytorch_model.bin` holds the same weights twice, and the model is the
+ * size of one of them.
  */
 export function sumWeightFileSizes(files: RepoFile[]): {
 	totalBytes: number;
@@ -298,10 +329,44 @@ export function sumWeightFileSizes(files: RepoFile[]): {
 		.filter((file) => isWeightFile(file.rfilename))
 		.map((file) => ({ path: file.rfilename, sizeBytes: file.size ?? 0 }));
 
+	if (weightFiles.length === 0) {
+		return { totalBytes: 0, files: [] };
+	}
+
+	// The weights of the most standard format, when the repo publishes several.
+	const extension = WEIGHT_FILE_PRIORITY.find((candidate) =>
+		weightFiles.some((file) => getWeightFileExtension(file.path) === candidate),
+	);
+	const candidates = weightFiles.filter((file) => getWeightFileExtension(file.path) === extension);
+
+	// A repo can hold the shards of a file (`model-00001-of-00002.safetensors`) next to another
+	// serialization of the same weights: the shards are the model.
+	const sharded = candidates.filter((file) => getShardKey(file.path) !== file.path);
+	const shards = sharded.length > 0 ? getBiggestGroup(sharded) : candidates;
+
 	return {
-		totalBytes: weightFiles.reduce((total, file) => total + file.sizeBytes, 0),
-		files: weightFiles,
+		totalBytes: shards.reduce((total, file) => total + file.sizeBytes, 0),
+		files: shards,
 	};
+}
+
+/**
+ * Biggest group of files that share a name, among the shards of a same file.
+ */
+function getBiggestGroup(files: Array<{ path: string; sizeBytes: number }>): Array<{
+	path: string;
+	sizeBytes: number;
+}> {
+	const groups = new Map<string, Array<{ path: string; sizeBytes: number }>>();
+	for (const file of files) {
+		const key = getShardKey(file.path);
+		groups.set(key, [...(groups.get(key) ?? []), file]);
+	}
+
+	return [...groups.values()].sort(
+		(a, b) =>
+			b.reduce((total, file) => total + file.sizeBytes, 0) - a.reduce((total, file) => total + file.sizeBytes, 0),
+	)[0];
 }
 
 /**
@@ -386,9 +451,21 @@ export interface AttentionConfig {
 	 */
 	maxPositionEmbeddings?: number;
 	/**
-	 * Type of each layer, for hybrid models (`linear_attention` / `full_attention`).
+	 * Type of each layer, for hybrid models (`linear_attention` / `full_attention` /
+	 * `sliding_attention`).
 	 */
 	layerTypes?: string[];
+	/**
+	 * Length of the sliding window of the sliding attention layers, in tokens.
+	 */
+	slidingWindow?: number;
+	/**
+	 * Whether the sliding attention layers really slide.
+	 *
+	 * Some models declare sliding attention layers but disable the sliding window, in which case
+	 * those layers hold the whole context.
+	 */
+	useSlidingWindow?: boolean;
 }
 
 /**
@@ -411,6 +488,11 @@ export function attentionConfigFromModelConfig(config: unknown): AttentionConfig
 		return typeof value === "number" ? value : undefined;
 	};
 
+	const bool = (key: string): boolean | undefined => {
+		const value = source[key];
+		return typeof value === "boolean" ? value : undefined;
+	};
+
 	const numHiddenLayers = num("num_hidden_layers");
 	const numAttentionHeads = num("num_attention_heads");
 	if (numHiddenLayers === undefined && numAttentionHeads === undefined) {
@@ -429,31 +511,112 @@ export function attentionConfigFromModelConfig(config: unknown): AttentionConfig
 		hiddenSize: num("hidden_size"),
 		maxPositionEmbeddings: num("max_position_embeddings"),
 		layerTypes,
+		slidingWindow: num("sliding_window"),
+		useSlidingWindow: bool("use_sliding_window"),
 	};
 }
 
 /**
- * Number of bytes of KV cache held per token of context.
+ * Size of the KV cache of a model.
  *
- * Only the layers that use full attention hold a KV cache: the state of the linear attention
- * layers of hybrid models doesn't grow with the context (it is a few tens of MB for the whole
- * model, against the GBs of the KV cache).
+ * The full attention layers hold a KV cache that grows with the context, while the sliding
+ * attention layers only hold the last tokens of the context.
+ */
+export interface KvCacheSpec {
+	/**
+	 * Bytes of KV cache held per token of context, by the full attention layers.
+	 */
+	bytesPerToken: number;
+	/**
+	 * Bytes of KV cache held by the sliding attention layers, whatever the context length.
+	 */
+	slidingWindowBytes?: number;
+	/**
+	 * Length of the sliding window, in tokens.
+	 */
+	slidingWindow?: number;
+}
+
+/**
+ * Number of bytes of KV cache held per token of context, by the full attention layers.
+ *
+ * Only the layers that use full attention hold a KV cache that grows with the context: the state
+ * of the linear attention layers of hybrid models doesn't grow (it is a few tens of MB for the
+ * whole model, against the GBs of the KV cache).
  *
  * @param config attention configuration of the model
  * @param bytesPerElement size of a KV element, 2 bytes (FP16) by default
  */
 export function kvCacheBytesPerToken(config: AttentionConfig, bytesPerElement = 2): number {
-	const layers = config.layerTypes
-		? config.layerTypes.filter((type) => type === "full_attention").length
-		: (config.numHiddenLayers ?? 0);
-
 	const kvHeads = config.numKeyValueHeads ?? config.numAttentionHeads ?? 0;
 	const headDim =
 		config.headDim ??
 		(config.hiddenSize && config.numAttentionHeads ? config.hiddenSize / config.numAttentionHeads : 0);
 
+	const { fullAttentionLayers } = getAttentionLayerCounts(config);
+
 	// K and V
-	return 2 * layers * kvHeads * headDim * bytesPerElement;
+	return 2 * fullAttentionLayers * kvHeads * headDim * bytesPerElement;
+}
+
+/**
+ * Number of layers of a model that hold a KV cache, and how they slide.
+ */
+function getAttentionLayerCounts(config: AttentionConfig): {
+	fullAttentionLayers: number;
+	slidingAttentionLayers: number;
+} {
+	if (!config.layerTypes) {
+		return { fullAttentionLayers: config.numHiddenLayers ?? 0, slidingAttentionLayers: 0 };
+	}
+
+	const fullAttentionLayers = config.layerTypes.filter((type) => type === "full_attention").length;
+	const slidingAttentionLayers = config.layerTypes.filter((type) => type === "sliding_attention").length;
+
+	// A model can declare sliding attention layers and disable the sliding window, in which case
+	// those layers hold the whole context.
+	if (config.useSlidingWindow === false || !config.slidingWindow) {
+		return { fullAttentionLayers: fullAttentionLayers + slidingAttentionLayers, slidingAttentionLayers: 0 };
+	}
+
+	return { fullAttentionLayers, slidingAttentionLayers };
+}
+
+/**
+ * Describes the KV cache of a model.
+ *
+ * @param config attention configuration of the model
+ * @param bytesPerElement size of a KV element, 2 bytes (FP16) by default
+ */
+export function getKvCacheSpec(config: AttentionConfig, bytesPerElement = 2): KvCacheSpec | undefined {
+	const kvHeads = config.numKeyValueHeads ?? config.numAttentionHeads;
+	const headDim =
+		config.headDim ??
+		(config.hiddenSize && config.numAttentionHeads ? config.hiddenSize / config.numAttentionHeads : undefined);
+
+	if (!kvHeads || !headDim) {
+		return undefined;
+	}
+
+	const { fullAttentionLayers, slidingAttentionLayers } = getAttentionLayerCounts(config);
+	const elementBytes = 2 * kvHeads * headDim * bytesPerElement; // K and V
+
+	return {
+		bytesPerToken: fullAttentionLayers * elementBytes,
+		slidingWindowBytes:
+			slidingAttentionLayers > 0 ? slidingAttentionLayers * elementBytes * (config.slidingWindow ?? 0) : undefined,
+		slidingWindow: slidingAttentionLayers > 0 ? config.slidingWindow : undefined,
+	};
+}
+
+/**
+ * Size of the KV cache of a model, for a given context length.
+ *
+ * @param spec KV cache of the model
+ * @param contextLength length of the context the model is run with
+ */
+export function getKvCacheBytes(spec: KvCacheSpec, contextLength: number): number {
+	return spec.bytesPerToken * contextLength + (spec.slidingWindowBytes ?? 0);
 }
 
 /**
@@ -492,18 +655,18 @@ export const DEFAULT_MIN_OVERHEAD_BYTES = 512 * 1024 * 1024;
  * Estimates the memory needed to run a model.
  *
  * @param weightBytes size of the weights
- * @param kvCacheBytesPerToken size of the KV cache per token, 0 when the model has no KV cache
+ * @param kvCache KV cache of the model, when it has one
  * @param contextLength length of the context the model is run with
  */
 export function estimateMemoryRequirement(params: {
 	weightBytes: number;
-	kvCacheBytesPerToken?: number;
+	kvCache?: KvCacheSpec;
 	contextLength?: number;
 	overheadRatio?: number;
 	minOverheadBytes?: number;
 }): MemoryRequirement {
 	const { weightBytes } = params;
-	const kvCacheBytes = (params.kvCacheBytesPerToken ?? 0) * (params.contextLength ?? 0);
+	const kvCacheBytes = params.kvCache ? getKvCacheBytes(params.kvCache, params.contextLength ?? 0) : 0;
 	const overheadRatio = params.overheadRatio ?? DEFAULT_OVERHEAD_RATIO;
 	const minOverheadBytes = params.minOverheadBytes ?? DEFAULT_MIN_OVERHEAD_BYTES;
 	const overheadBytes = Math.max(minOverheadBytes, Math.round(weightBytes * overheadRatio));
@@ -664,7 +827,7 @@ export function getQuantVariantMemoryRequirement(
 ): MemoryRequirement {
 	return estimateMemoryRequirement({
 		weightBytes: row.sizeBytes,
-		kvCacheBytesPerToken: row.kvCacheBytesPerToken,
+		kvCache: row.kvCache,
 		contextLength: options?.contextLength ?? row.contextLength ?? 0,
 		overheadRatio: options?.overheadRatio,
 		minOverheadBytes: options?.minOverheadBytes,

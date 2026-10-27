@@ -5,10 +5,14 @@
  * script lists the same menu for any model: the base model, and the quantized variants that
  * were published for it (`Qwen/Qwen3.8-27B-FP8` and friends).
  *
+ * The menu is read from the Hub. To read it from the local mock hub instead, start it with
+ * `pnpm --filter @huggingface/hub mock-hub` and pass `--hub-url http://localhost:8787`.
+ *
  * Usage:
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --hardware "RTX 4090"
  *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --html menu.html
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --hub-url http://localhost:8787
  */
 
 import {
@@ -30,6 +34,7 @@ const { values, positionals } = parseArgs({
 		context: { type: "string" },
 		all: { type: "boolean" },
 		limit: { type: "string" },
+		"hub-url": { type: "string" },
 		html: { type: "string" },
 	},
 });
@@ -73,6 +78,7 @@ async function main() {
 		name: model,
 		authors: values.all ? [] : "same",
 		limit: values.limit ? Number(values.limit) : undefined,
+		hubUrl: values["hub-url"],
 	});
 
 	const groups = new Map<number, QuantVariantRow[]>();

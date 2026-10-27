@@ -60,7 +60,9 @@
 		"build:xet-wasm": "./scripts/build-xet-wasm.sh -t bundler --clean",
 		"bench": "tsx scripts/bench.ts",
 		"debug-xet": "tsx scripts/debug-xet.ts",
-		"quant-variants": "tsx scripts/quant-variants.ts"
+		"quant-variants": "tsx scripts/quant-variants.ts",
+		"mock-hub": "tsx scripts/mock-hub.ts",
+		"dump-fixtures": "tsx scripts/dump-fixtures.ts"
 	},
 	"dependencies": {
 		"@huggingface/tasks": "workspace:^",
