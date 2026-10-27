@@ -158,6 +158,16 @@ describe("getGGUFVariantRows", () => {
 		expect(rows[0].sizeBytes).toBe(54657735616);
 	});
 
+	it("should keep the files of two different models apart", () => {
+		const rows = getGGUFVariantRows("huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF", [
+			{ rfilename: "Huihui-Qwen3.8-27B-abliterated-UD-DW-bf16.gguf", size: 54657735616 },
+			{ rfilename: "Huihui-Qwen3.8-27B-abliterated-bf16.gguf", size: 54657735616 },
+		]);
+
+		expect(rows).toHaveLength(2);
+		expect(rows.map((row) => row.sizeBytes)).toEqual([54657735616, 54657735616]);
+	});
+
 	it("should tell the projector and the mtp head apart", () => {
 		const rows = getGGUFVariantRows("unsloth/Qwen3.8-27B-GGUF", [
 			{ rfilename: "mmproj-Qwen3.8-27B-F16.gguf", size: 100 },

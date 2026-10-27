@@ -305,6 +305,17 @@ export function sumWeightFileSizes(files: RepoFile[]): {
 }
 
 /**
+ * Key that identifies the shards of a same quantization.
+ *
+ * `Qwen3.8-27B-BF16-00001-of-00002.gguf` and `Qwen3.8-27B-BF16-00002-of-00002.gguf` are the two
+ * shards of a same quantization, while two files that share a quantization but not a name are
+ * two different models.
+ */
+function getGGUFShardKey(path: string): string {
+	return path.replace(/-\d{5}-of-\d{5}(?=\.gguf$)/i, "");
+}
+
+/**
  * Builds the rows of the menu of a GGUF repo: one row per quantization.
  *
  * The label of a row is the quantization carried by the name of the file (`Q4_K_M`, `UD-IQ1_S`, …).
@@ -328,7 +339,7 @@ export function getGGUFVariantRows(id: string, files: RepoFile[]): QuantVariantR
 		const quantLabel = parseGGUFQuantLabel(file.rfilename) ?? "GGUF";
 		const label = role === "model" ? quantLabel : `${role === "mtp" ? "MTP" : "mmproj"} ${quantLabel}`;
 
-		const key = `${role}:${label}`;
+		const key = `${role}:${label}:${getGGUFShardKey(file.rfilename)}`;
 		const group = groups.get(key) ?? { role, label, files: [] };
 		group.files.push(file);
 		groups.set(key, group);

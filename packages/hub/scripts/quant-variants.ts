@@ -29,6 +29,7 @@ const { values, positionals } = parseArgs({
 		memory: { type: "string" },
 		context: { type: "string" },
 		all: { type: "boolean" },
+		limit: { type: "string" },
 		html: { type: "string" },
 	},
 });
@@ -71,6 +72,7 @@ async function main() {
 	const rows = await listQuantVariants({
 		name: model,
 		authors: values.all ? [] : "same",
+		limit: values.limit ? Number(values.limit) : undefined,
 	});
 
 	const groups = new Map<number, QuantVariantRow[]>();
