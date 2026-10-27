@@ -19,6 +19,8 @@ export default defineConfig({
 			// Because vi.mock is not supported in browser mode
 			"src/utils/uploadShards.spec.ts",
 			"src/utils/sha256-abort.spec.ts",
+			// Because it starts a local server, and reads the fixtures from the disk
+			"scripts/mock-hub.spec.ts",
 		],
 	},
 });
