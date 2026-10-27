@@ -328,10 +328,13 @@ describe("getKvCacheSpec", () => {
 			numKeyValueHeads: 8,
 			headDim: 128,
 		});
+		if (!spec) {
+			throw new Error("the model should have a kv cache");
+		}
 
-		expect(spec?.bytesPerToken).toBe(131072);
-		expect(spec?.slidingWindowBytes).toBeUndefined();
-		expect(getKvCacheBytes(spec!, 4096)).toBe(131072 * 4096);
+		expect(spec.bytesPerToken).toBe(131072);
+		expect(spec.slidingWindowBytes).toBeUndefined();
+		expect(getKvCacheBytes(spec, 4096)).toBe(131072 * 4096);
 	});
 
 	it("should keep the sliding attention layers in a bounded cache", () => {
@@ -343,15 +346,18 @@ describe("getKvCacheSpec", () => {
 			slidingWindow: 4096,
 			layerTypes: Array.from({ length: 32 }, (_, index) => (index % 4 === 3 ? "full_attention" : "sliding_attention")),
 		});
+		if (!spec) {
+			throw new Error("the model should have a kv cache");
+		}
 
 		// 8 full attention layers
-		expect(spec?.bytesPerToken).toBe(2 * 8 * 8 * 128 * 2);
+		expect(spec.bytesPerToken).toBe(2 * 8 * 8 * 128 * 2);
 		// 24 sliding attention layers, that only hold the last 4096 tokens
-		expect(spec?.slidingWindow).toBe(4096);
-		expect(spec?.slidingWindowBytes).toBe(2 * 24 * 8 * 128 * 2 * 4096);
+		expect(spec.slidingWindow).toBe(4096);
+		expect(spec.slidingWindowBytes).toBe(2 * 24 * 8 * 128 * 2 * 4096);
 
 		// The cache doesn't grow with the context past the sliding window
-		expect(getKvCacheBytes(spec!, 8192)).toBe(spec!.bytesPerToken * 8192 + spec!.slidingWindowBytes!);
+		expect(getKvCacheBytes(spec, 8192)).toBe(spec.bytesPerToken * 8192 + (spec.slidingWindowBytes ?? 0));
 	});
 
 	it("should treat the sliding layers as full attention when the window is disabled", () => {
