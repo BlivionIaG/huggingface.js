@@ -83,6 +83,7 @@
 	],
 	"_id": "6a8167f07e5b0adb68f9fcf0",
 	"id": "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -110,6 +111,10 @@
 			"reasoning"
 		]
 	},
+	"createdAt": "2026-08-16T07:34:08.000Z",
+	"downloads": 94127,
+	"downloadsAllTime": 492685,
+	"gated": "auto",
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -119,5 +124,38 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 10455914080
-	}
+	},
+	"lastModified": "2026-10-27T06:56:40.000Z",
+	"likes": 1611,
+	"library_name": "gguf",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"abliterated",
+		"qwen",
+		"qwen3",
+		"qwen3.8",
+		"llama.cpp",
+		"uncensored",
+		"ai-red-team",
+		"red-teaming",
+		"vision-language",
+		"mmproj",
+		"mtp",
+		"function-calling",
+		"reasoning",
+		"image-text-to-text",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"imatrix",
+		"conversational"
+	],
+	"trendingScore": 33,
+	"usedStorage": 288447505952
 }

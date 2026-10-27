@@ -131,6 +131,7 @@
 	],
 	"_id": "6abb35648a5ba01dff2721a5",
 	"id": "DavidAU/Qwen3.8-27B-Turbo-Brilliance-50X-Reasoning-Instruct-NEO-MAX-MTP-GGUF",
+	"author": "DavidAU",
 	"cardData": {
 		"license": "apache-2.0",
 		"language": [
@@ -173,6 +174,10 @@
 			"Qwen/Qwen3.8-27B"
 		]
 	},
+	"createdAt": "2026-09-29T03:49:56.000Z",
+	"downloads": 541465,
+	"downloadsAllTime": 541465,
+	"gated": false,
 	"gguf": {
 		"total": 26895998464,
 		"architecture": "qwen35",
@@ -182,5 +187,53 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 9259728768
-	}
+	},
+	"lastModified": "2026-10-17T22:46:13.000Z",
+	"likes": 252,
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"27 reasoning modes",
+		"27 instruct modes",
+		"15 AI Constructs",
+		"5 Super AI Constructs",
+		"Brainstorm AI Construct",
+		"Brainstorm Business AI Construct",
+		"Universal Teacher AI Construct",
+		"Agent AI Construct",
+		"Coder AI Construct",
+		"Turbo-Brilliance",
+		"9 Xhigh reasoning modes",
+		"NEO Imatrix",
+		"NEO Imatrix MAX",
+		"MTP Quants",
+		"GGUF GSQ-RCO",
+		"image-text-to-text",
+		"ar",
+		"zh",
+		"en",
+		"fr",
+		"de",
+		"hi",
+		"id",
+		"it",
+		"ja",
+		"ko",
+		"pl",
+		"pt",
+		"ru",
+		"es",
+		"th",
+		"vi",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"imatrix",
+		"conversational"
+	],
+	"trendingScore": 79,
+	"usedStorage": 489700596919
 }

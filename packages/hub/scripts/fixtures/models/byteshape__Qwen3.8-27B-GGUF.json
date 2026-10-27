@@ -43,6 +43,7 @@
 	],
 	"_id": "6a849035fcf5142100762676",
 	"id": "byteshape/Qwen3.8-27B-GGUF",
+	"author": "byteshape",
 	"cardData": {
 		"library_name": "transformers",
 		"license": "apache-2.0",
@@ -60,6 +61,10 @@
 			"agentic"
 		]
 	},
+	"createdAt": "2026-08-18T17:02:45.000Z",
+	"downloads": 2002988,
+	"downloadsAllTime": 2397015,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -68,5 +73,29 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 8843953536
-	}
+	},
+	"lastModified": "2026-09-18T16:06:20.000Z",
+	"likes": 185,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"transformers",
+		"gguf",
+		"qwen3.8",
+		"byteshape",
+		"shapelearn",
+		"mtp",
+		"dflash",
+		"agentic",
+		"image-text-to-text",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 10,
+	"usedStorage": 142478462696
 }

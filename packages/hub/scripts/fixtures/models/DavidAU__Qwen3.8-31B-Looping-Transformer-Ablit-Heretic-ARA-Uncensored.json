@@ -103,6 +103,7 @@
 	],
 	"_id": "6adaffdf8e8d07dfba68de10",
 	"id": "DavidAU/Qwen3.8-31B-Looping-Transformer-Ablit-Heretic-ARA-Uncensored",
+	"author": "DavidAU",
 	"cardData": {
 		"license": "apache-2.0",
 		"language": [
@@ -122,10 +123,41 @@
 			"uncensored"
 		]
 	},
+	"createdAt": "2026-10-23T06:34:07.000Z",
+	"downloads": 8,
+	"downloadsAllTime": 8,
+	"gated": "manual",
+	"lastModified": "2026-10-25T03:47:25.000Z",
+	"likes": 24,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 30825577520
 		},
 		"total": 30825577520
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"looping-transformer",
+		"experimental",
+		"qwen3_8",
+		"abliterated",
+		"ara",
+		"heretic",
+		"uncensored",
+		"conversational",
+		"en",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 24,
+	"usedStorage": 61684117603
 }

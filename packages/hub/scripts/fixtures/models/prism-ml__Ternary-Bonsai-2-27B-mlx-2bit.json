@@ -103,6 +103,7 @@
 	],
 	"_id": "6aab291ee6bfe68d03dae815",
 	"id": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+	"author": "prism-ml",
 	"cardData": {
 		"license": "apache-2.0",
 		"library_name": "mlx",
@@ -122,6 +123,15 @@
 			"Qwen/Qwen3.8-27B"
 		]
 	},
+	"createdAt": "2026-09-16T23:41:18.000Z",
+	"downloads": 32330,
+	"downloadsAllTime": 93784,
+	"gated": false,
+	"lastModified": "2026-09-22T21:18:49.000Z",
+	"likes": 477,
+	"library_name": "mlx",
+	"pipeline_tag": "text-generation",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"F32": 29148672,
@@ -129,5 +139,26 @@
 			"F16": 460730096
 		},
 		"total": 27359638768
-	}
+	},
+	"tags": [
+		"mlx",
+		"safetensors",
+		"prism_hadamard_qwen35",
+		"ternary",
+		"2-bit",
+		"cuda",
+		"metal",
+		"on-device",
+		"hybrid-attention",
+		"prismml",
+		"bonsai",
+		"text-generation",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"region:us"
+	],
+	"trendingScore": 10,
+	"usedStorage": 8608287310
 }

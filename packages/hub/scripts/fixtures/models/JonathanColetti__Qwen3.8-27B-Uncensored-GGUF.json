@@ -83,6 +83,7 @@
 	],
 	"_id": "6a7e8ee8b77fccb497299fb3",
 	"id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+	"author": "JonathanColetti",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -103,6 +104,10 @@
 			"quantized"
 		]
 	},
+	"createdAt": "2026-08-14T03:43:36.000Z",
+	"downloads": 2463788,
+	"downloadsAllTime": 6687382,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -112,5 +117,31 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 10624771968
-	}
+	},
+	"lastModified": "2026-08-29T04:18:18.000Z",
+	"likes": 1762,
+	"library_name": "llama.cpp",
+	"pipeline_tag": "text-generation",
+	"private": false,
+	"tags": [
+		"llama.cpp",
+		"gguf",
+		"uncensored",
+		"qwen3.8",
+		"mtp",
+		"speculative-decoding",
+		"imatrix",
+		"quantized",
+		"text-generation",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 81,
+	"usedStorage": 251029000064
 }

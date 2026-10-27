@@ -55,6 +55,7 @@
 	],
 	"_id": "6a7d804355bb95e87d31c535",
 	"id": "unsloth/Qwen3.8-27B-NVFP4",
+	"author": "unsloth",
 	"cardData": {
 		"base_model": [
 			"Qwen/Qwen3.8-27B"
@@ -64,6 +65,13 @@
 			"unsloth"
 		]
 	},
+	"createdAt": "2026-08-13T08:28:51.000Z",
+	"downloads": 1521377,
+	"downloadsAllTime": 6562381,
+	"gated": false,
+	"lastModified": "2026-09-08T23:09:24.000Z",
+	"likes": 525,
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 1758366992,
@@ -71,5 +79,17 @@
 			"U8": 7486832640
 		},
 		"total": 19869895952
-	}
+	},
+	"tags": [
+		"safetensors",
+		"qwen3_5",
+		"unsloth",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"compressed-tensors",
+		"region:us"
+	],
+	"trendingScore": 8,
+	"usedStorage": 23437581813
 }

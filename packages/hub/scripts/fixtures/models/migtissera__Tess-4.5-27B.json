@@ -135,6 +135,7 @@
 	],
 	"_id": "6ad510ae232ec4e5c18bd95b",
 	"id": "migtissera/Tess-4.5-27B",
+	"author": "migtissera",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -153,10 +154,40 @@
 			"qwen3.8"
 		]
 	},
+	"createdAt": "2026-10-18T18:32:14.000Z",
+	"downloads": 549,
+	"downloadsAllTime": 549,
+	"gated": false,
+	"lastModified": "2026-10-18T23:29:35.000Z",
+	"likes": 56,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"tess",
+		"agentic",
+		"coding",
+		"reasoning",
+		"tool-use",
+		"qwen3.8",
+		"conversational",
+		"en",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 12,
+	"usedStorage": 55644659724
 }

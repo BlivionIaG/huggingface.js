@@ -147,6 +147,7 @@
 	],
 	"_id": "6aaaa6bd63c33058fdf07bf1",
 	"id": "ukisai/Swift-1.5-Qwen3.8-27b",
+	"author": "ukisai",
 	"cardData": {
 		"license": "other",
 		"license_name": "swift-open-license-1.0",
@@ -165,10 +166,39 @@
 		"base_model": "Qwen/Qwen3.8-27B",
 		"base_model_relation": "finetune"
 	},
+	"createdAt": "2026-09-16T14:25:01.000Z",
+	"downloads": 8409,
+	"downloadsAllTime": 9660,
+	"gated": false,
+	"lastModified": "2026-10-03T19:51:05.000Z",
+	"likes": 170,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"qwen3_8",
+		"reasoning",
+		"efficient-thinking",
+		"token-efficient",
+		"post-training",
+		"terminal-bench",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:other",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 20,
+	"usedStorage": 55580862660
 }

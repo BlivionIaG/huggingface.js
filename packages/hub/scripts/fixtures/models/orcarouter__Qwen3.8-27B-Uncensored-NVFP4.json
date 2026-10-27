@@ -83,6 +83,7 @@
 	],
 	"_id": "6a85204670444e8ed100263b",
 	"id": "orcarouter/Qwen3.8-27B-Uncensored-NVFP4",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -113,6 +114,15 @@
 			"mtp"
 		]
 	},
+	"createdAt": "2026-08-19T03:17:26.000Z",
+	"downloads": 30523,
+	"downloadsAllTime": 202775,
+	"gated": "auto",
+	"lastModified": "2026-10-27T06:56:50.000Z",
+	"likes": 349,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 3454464784,
@@ -120,5 +130,39 @@
 			"U8": 14973665280
 		},
 		"total": 21232112736
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"abliterated",
+		"qwen",
+		"qwen3",
+		"qwen3.8",
+		"uncensored",
+		"ai-red-team",
+		"red-teaming",
+		"nvfp4",
+		"fp4",
+		"fp8",
+		"mixed-precision",
+		"compressed-tensors",
+		"vllm",
+		"vision-language",
+		"function-calling",
+		"reasoning",
+		"mtp",
+		"conversational",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"8-bit",
+		"region:us"
+	],
+	"trendingScore": 10,
+	"usedStorage": 24708479272
 }

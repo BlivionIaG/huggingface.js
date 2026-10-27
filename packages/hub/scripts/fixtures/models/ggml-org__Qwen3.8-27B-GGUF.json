@@ -63,6 +63,7 @@
 	],
 	"_id": "6a7f31a8d0b754daf3d51692",
 	"id": "ggml-org/Qwen3.8-27B-GGUF",
+	"author": "ggml-org",
 	"cardData": {
 		"license": "apache-2.0",
 		"pipeline_tag": "image-text-to-text",
@@ -74,6 +75,10 @@
 			"Qwen/Qwen3.8-27B"
 		]
 	},
+	"createdAt": "2026-08-14T15:18:00.000Z",
+	"downloads": 2266925,
+	"downloadsAllTime": 4191727,
+	"gated": false,
 	"gguf": {
 		"total": 26895998464,
 		"architecture": "qwen35",
@@ -82,5 +87,22 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 53808282048
-	}
+	},
+	"lastModified": "2026-10-19T15:35:52.000Z",
+	"likes": 143,
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"quantized",
+		"image-text-to-text",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 8,
+	"usedStorage": 232907855488
 }

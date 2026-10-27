@@ -131,15 +131,40 @@
 	],
 	"_id": "6a72f2e302294c7d32dd278e",
 	"id": "Qwen/Qwen3.8-27B",
+	"author": "Qwen",
 	"cardData": {
 		"library_name": "transformers",
 		"license": "apache-2.0",
 		"pipeline_tag": "image-text-to-text"
 	},
+	"createdAt": "2026-08-05T08:22:59.000Z",
+	"downloads": 7522728,
+	"downloadsAllTime": 18820244,
+	"gated": false,
+	"lastModified": "2026-08-14T15:00:01.000Z",
+	"likes": 18524,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"conversational",
+		"license:apache-2.0",
+		"eval-results",
+		"endpoints_compatible",
+		"deploy:azure",
+		"deploy:sagemaker",
+		"region:us"
+	],
+	"trendingScore": 320,
+	"usedStorage": 55615875685
 }

@@ -91,6 +91,7 @@
 	],
 	"_id": "6a7f437e72f87f0631a03f60",
 	"id": "JonathanColetti/Qwen3.8-27B-Uncensored",
+	"author": "JonathanColetti",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -109,10 +110,40 @@
 			"vision"
 		]
 	},
+	"createdAt": "2026-08-14T16:34:06.000Z",
+	"downloads": 47300,
+	"downloadsAllTime": 74739,
+	"gated": false,
+	"lastModified": "2026-08-14T19:42:58.000Z",
+	"likes": 116,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"uncensored",
+		"abliterated",
+		"qwen3.8",
+		"mtp",
+		"vision",
+		"conversational",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 6,
+	"usedStorage": 55582996517
 }

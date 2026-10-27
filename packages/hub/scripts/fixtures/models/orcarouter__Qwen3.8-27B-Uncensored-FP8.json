@@ -83,6 +83,7 @@
 	],
 	"_id": "6a7ffce0ca48ae23da6ebc0a",
 	"id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -107,11 +108,47 @@
 			"mtp"
 		]
 	},
+	"createdAt": "2026-08-15T05:45:04.000Z",
+	"downloads": 121592,
+	"downloadsAllTime": 648560,
+	"gated": "auto",
+	"lastModified": "2026-10-27T06:56:37.000Z",
+	"likes": 1858,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 3082220272,
 			"F8_E4M3": 24699207680
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"abliterated",
+		"qwen3.8",
+		"uncensored",
+		"ai-red-team",
+		"red-teaming",
+		"fp8",
+		"block-fp8",
+		"vllm",
+		"function-calling",
+		"reasoning",
+		"mtp",
+		"conversational",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 14,
+	"usedStorage": 30879676456
 }

@@ -83,6 +83,7 @@
 	],
 	"_id": "6ad919d0cc77ad9989ae6c56",
 	"id": "kaitchup/Qwen3.8-27B-SLQ-EAR98",
+	"author": "kaitchup",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": [
@@ -101,11 +102,39 @@
 			"quantization"
 		]
 	},
+	"createdAt": "2026-10-21T20:00:16.000Z",
+	"downloads": 506,
+	"downloadsAllTime": 506,
+	"gated": false,
+	"lastModified": "2026-10-26T18:14:31.000Z",
+	"likes": 29,
+	"pipeline_tag": "text-generation",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 3431363312,
 			"I32": 4063831040
 		},
 		"total": 7495194352
-	}
+	},
+	"tags": [
+		"safetensors",
+		"qwen3_5",
+		"slq",
+		"mixed-precision",
+		"humming",
+		"vllm",
+		"gptq",
+		"autoround",
+		"quantization",
+		"text-generation",
+		"conversational",
+		"arxiv:2605.02404",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"region:us"
+	],
+	"trendingScore": 29,
+	"usedStorage": 23744372408
 }

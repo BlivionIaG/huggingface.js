@@ -27,6 +27,7 @@
 	],
 	"_id": "6a7f2d9752ecf5558942e80c",
 	"id": "lmstudio-community/Qwen3.8-27B-GGUF",
+	"author": "lmstudio-community",
 	"cardData": {
 		"base_model": "Qwen/Qwen3.8-27B",
 		"license": "apache-2.0",
@@ -34,6 +35,10 @@
 			"gguf"
 		]
 	},
+	"createdAt": "2026-08-14T15:00:39.000Z",
+	"downloads": 1119796,
+	"downloadsAllTime": 4818167,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -42,5 +47,19 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 16810714336
-	}
+	},
+	"lastModified": "2026-08-14T15:10:57.000Z",
+	"likes": 79,
+	"private": false,
+	"tags": [
+		"gguf",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 7,
+	"usedStorage": 69219944224
 }

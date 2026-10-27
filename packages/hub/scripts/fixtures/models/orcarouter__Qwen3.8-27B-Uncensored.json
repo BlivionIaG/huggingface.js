@@ -127,6 +127,7 @@
 	],
 	"_id": "6a83bdd45235f3a3672c77d7",
 	"id": "orcarouter/Qwen3.8-27B-Uncensored",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -154,10 +155,49 @@
 			"mtp"
 		]
 	},
+	"createdAt": "2026-08-18T02:05:08.000Z",
+	"downloads": 18276,
+	"downloadsAllTime": 101710,
+	"gated": "auto",
+	"lastModified": "2026-10-27T06:56:53.000Z",
+	"likes": 493,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"abliterated",
+		"qwen",
+		"qwen3",
+		"qwen3.8",
+		"uncensored",
+		"ai-red-team",
+		"red-teaming",
+		"bf16",
+		"post-training",
+		"fine-tuning",
+		"vision-language",
+		"function-calling",
+		"reasoning",
+		"mtp",
+		"conversational",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 19,
+	"usedStorage": 55575816096
 }

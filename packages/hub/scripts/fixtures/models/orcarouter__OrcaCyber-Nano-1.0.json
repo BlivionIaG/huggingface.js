@@ -27,6 +27,7 @@
 	],
 	"_id": "6ad1f6c83da1d9c6c6140403",
 	"id": "orcarouter/OrcaCyber-Nano-1.0",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "other",
 		"license_name": "qwen",
@@ -51,6 +52,10 @@
 			"local"
 		]
 	},
+	"createdAt": "2026-10-16T10:04:56.000Z",
+	"downloads": 33004,
+	"downloadsAllTime": 33004,
+	"gated": "auto",
 	"gguf": {
 		"total": 1924404480,
 		"architecture": "dflash",
@@ -60,5 +65,33 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 2056414112
-	}
+	},
+	"lastModified": "2026-10-27T06:56:23.000Z",
+	"likes": 272,
+	"library_name": "gguf",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"cybersecurity",
+		"security",
+		"reverse-engineering",
+		"vision-language",
+		"reasoning",
+		"function-calling",
+		"mtp",
+		"llama.cpp",
+		"local",
+		"image-text-to-text",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:other",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 115,
+	"usedStorage": 31672474144
 }

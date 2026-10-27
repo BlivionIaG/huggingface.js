@@ -59,6 +59,7 @@
 	],
 	"_id": "6ad5845af3bd06768ca4473c",
 	"id": "basecompute/Qwen3.8-27B-BaseQuant-V1",
+	"author": "basecompute",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -70,6 +71,10 @@
 			"quantized"
 		]
 	},
+	"createdAt": "2026-10-19T02:45:46.000Z",
+	"downloads": 5671,
+	"downloadsAllTime": 5671,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -78,5 +83,24 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 20822480416
-	}
+	},
+	"lastModified": "2026-10-26T05:46:21.000Z",
+	"likes": 27,
+	"pipeline_tag": "text-generation",
+	"private": false,
+	"tags": [
+		"gguf",
+		"basert",
+		"llama.cpp",
+		"quantized",
+		"text-generation",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 27,
+	"usedStorage": 169703307620
 }

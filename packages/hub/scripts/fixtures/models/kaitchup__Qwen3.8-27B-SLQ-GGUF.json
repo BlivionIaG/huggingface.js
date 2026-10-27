@@ -39,6 +39,7 @@
 	],
 	"_id": "6adff07278c82fc8ea6abdc4",
 	"id": "kaitchup/Qwen3.8-27B-SLQ-GGUF",
+	"author": "kaitchup",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": [
@@ -56,6 +57,10 @@
 			"quantization"
 		]
 	},
+	"createdAt": "2026-10-27T00:29:38.000Z",
+	"downloads": 239,
+	"downloadsAllTime": 239,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -64,5 +69,28 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 18875775840
-	}
+	},
+	"lastModified": "2026-10-27T00:40:25.000Z",
+	"likes": 29,
+	"library_name": "gguf",
+	"pipeline_tag": "text-generation",
+	"private": false,
+	"tags": [
+		"gguf",
+		"qwen3_5",
+		"slq",
+		"mixed-precision",
+		"llama.cpp",
+		"quantization",
+		"text-generation",
+		"arxiv:2605.02404",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 29,
+	"usedStorage": 63276261920
 }

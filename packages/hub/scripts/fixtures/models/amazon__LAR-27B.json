@@ -119,6 +119,7 @@
 	],
 	"_id": "6acfbc55802b9dda80350f83",
 	"id": "amazon/LAR-27B",
+	"author": "amazon",
 	"cardData": {
 		"license": "apache-2.0",
 		"datasets": [
@@ -131,10 +132,31 @@
 			"Qwen/Qwen3.8-27B"
 		]
 	},
+	"createdAt": "2026-10-14T17:31:01.000Z",
+	"downloads": 127,
+	"downloadsAllTime": 127,
+	"gated": false,
+	"lastModified": "2026-10-22T21:37:47.000Z",
+	"likes": 10,
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 26895998464
 		},
 		"total": 26895998464
-	}
+	},
+	"tags": [
+		"safetensors",
+		"qwen3_5",
+		"en",
+		"dataset:nebius/SWE-rebench",
+		"arxiv:2610.22448",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"eval-results",
+		"region:us"
+	],
+	"trendingScore": 9,
+	"usedStorage": 53805544683
 }

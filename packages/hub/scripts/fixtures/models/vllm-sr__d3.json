@@ -175,6 +175,7 @@
 	],
 	"_id": "6aca0796afc487532d913a00",
 	"id": "vllm-sr/d3",
+	"author": "vllm-sr",
 	"cardData": {
 		"pipeline_tag": "zero-shot-classification",
 		"license": "apache-2.0",
@@ -191,10 +192,41 @@
 			"safetensors"
 		]
 	},
+	"createdAt": "2026-10-10T09:38:30.000Z",
+	"downloads": 7487,
+	"downloadsAllTime": 7487,
+	"gated": false,
+	"lastModified": "2026-10-22T16:22:32.000Z",
+	"likes": 278,
+	"library_name": "transformers",
+	"pipeline_tag": "zero-shot-classification",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 26085330160
 		},
 		"total": 26085330160
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"feature-extraction",
+		"zero-shot-classification",
+		"decision-model",
+		"classification",
+		"system-one",
+		"multimodal",
+		"vision",
+		"video",
+		"custom_code",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"eval-results",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 18,
+	"usedStorage": 208723144639
 }

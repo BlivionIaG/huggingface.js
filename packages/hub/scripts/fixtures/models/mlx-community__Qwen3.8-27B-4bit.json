@@ -63,6 +63,7 @@
 	],
 	"_id": "6a7f347755b7bacd513b0565",
 	"id": "mlx-community/Qwen3.8-27B-4bit",
+	"author": "mlx-community",
 	"cardData": {
 		"library_name": "mlx",
 		"license": "apache-2.0",
@@ -72,11 +73,34 @@
 			"mlx"
 		]
 	},
+	"createdAt": "2026-08-14T15:29:59.000Z",
+	"downloads": 881446,
+	"downloadsAllTime": 1072237,
+	"gated": false,
+	"lastModified": "2026-09-14T12:37:43.000Z",
+	"likes": 228,
+	"library_name": "mlx",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"U32": 26893352960,
 			"BF16": 463375600
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"mlx",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"4-bit",
+		"region:us"
+	],
+	"trendingScore": 8,
+	"usedStorage": 16074530674
 }

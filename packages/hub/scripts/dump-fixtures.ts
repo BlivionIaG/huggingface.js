@@ -194,7 +194,7 @@ function pruneConfig(config: unknown): unknown {
  */
 async function dumpRepo(repo: string): Promise<boolean> {
 	const infoResponse = await fetchWithRetry(
-		`${HUB_URL}/api/models/${repo}?blobs=true&expand[]=config&expand[]=safetensors&expand[]=cardData&expand[]=gguf`,
+		`${HUB_URL}/api/models/${repo}?blobs=true&expand[]=config&expand[]=safetensors&expand[]=cardData&expand[]=gguf&expand[]=downloads&expand[]=likes&expand[]=tags&expand[]=pipeline_tag&expand[]=author&expand[]=createdAt&expand[]=lastModified&expand[]=gated&expand[]=private&expand[]=trendingScore&expand[]=usedStorage&expand[]=library_name&expand[]=downloadsAllTime`,
 	);
 	if (!infoResponse.ok) {
 		console.log(`${repo}: skipped (${infoResponse.status} ${infoResponse.statusText})`);

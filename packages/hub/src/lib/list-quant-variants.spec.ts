@@ -47,6 +47,14 @@ describe("listQuantVariants", () => {
 		}
 	});
 
+	it("should read the popularity of the repos", async () => {
+		const rows = await listQuantVariants({ name: "Qwen/Qwen3.8-27B" });
+
+		const base = rows.find((row) => row.id === "Qwen/Qwen3.8-27B");
+		expect(base?.downloads).toBeGreaterThan(0);
+		expect(base?.likes).toBeGreaterThan(0);
+	});
+
 	it("should list the gguf quantizations of a gguf repo", async () => {
 		const rows = await listQuantVariants({ name: "unsloth/Qwen3.8-27B-GGUF" });
 

@@ -215,6 +215,7 @@
 	],
 	"_id": "6a81b8bfa514d4eed962e012",
 	"id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+	"author": "huihui-ai",
 	"cardData": {
 		"library_name": "transformers",
 		"license": "apache-2.0",
@@ -239,6 +240,10 @@
 			"bonsai"
 		]
 	},
+	"createdAt": "2026-08-16T13:18:55.000Z",
+	"downloads": 2730322,
+	"downloadsAllTime": 6506161,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -247,5 +252,37 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 54657733920
-	}
+	},
+	"lastModified": "2026-10-10T04:51:31.000Z",
+	"likes": 1547,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"transformers",
+		"gguf",
+		"abliterated",
+		"uncensored",
+		"huihui",
+		"qwen3",
+		"unsloth",
+		"ternary",
+		"2-bit",
+		"llama-cpp",
+		"cuda",
+		"metal",
+		"on-device",
+		"hybrid-attention",
+		"prismml",
+		"bonsai",
+		"image-text-to-text",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 103,
+	"usedStorage": 799698503328
 }

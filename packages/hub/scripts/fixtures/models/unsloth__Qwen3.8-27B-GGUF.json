@@ -135,6 +135,7 @@
 	],
 	"_id": "6a7d8038d813eea1a14a8db4",
 	"id": "unsloth/Qwen3.8-27B-GGUF",
+	"author": "unsloth",
 	"cardData": {
 		"base_model": [
 			"Qwen/Qwen3.8-27B"
@@ -144,6 +145,10 @@
 			"unsloth"
 		]
 	},
+	"createdAt": "2026-08-13T08:28:40.000Z",
+	"downloads": 6009562,
+	"downloadsAllTime": 21317946,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -153,5 +158,22 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 16056478688
-	}
+	},
+	"lastModified": "2026-08-20T12:04:25.000Z",
+	"likes": 5374,
+	"private": false,
+	"tags": [
+		"gguf",
+		"qwen3_5",
+		"unsloth",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"imatrix",
+		"conversational"
+	],
+	"trendingScore": 121,
+	"usedStorage": 1053655307648
 }

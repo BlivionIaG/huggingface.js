@@ -60,6 +60,9 @@ async function fetchModelInfo(name: string, params: FetchParams): Promise<ApiMod
 		["expand[]", "safetensors"],
 		["expand[]", "cardData"],
 		["expand[]", "gguf"],
+		// The Hub only returns the popularity of a repo when it is asked for.
+		["expand[]", "downloads"],
+		["expand[]", "likes"],
 	]).toString();
 
 	const response = await (params.fetch || fetch)(`${params.hubUrl || HUB_URL}/api/models/${name}?${search}`, {

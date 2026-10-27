@@ -263,6 +263,7 @@
 	],
 	"_id": "6ab66ffdf7bd8732d74b7264",
 	"id": "autotrust/JEV-27B",
+	"author": "autotrust",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -381,10 +382,52 @@
 			}
 		]
 	},
+	"createdAt": "2026-09-25T12:58:37.000Z",
+	"downloads": 491375,
+	"downloadsAllTime": 491490,
+	"gated": false,
+	"lastModified": "2026-10-11T03:50:09.000Z",
+	"likes": 99,
+	"library_name": "transformers",
+	"pipeline_tag": "text-classification",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 26895998464
 		},
 		"total": 26895998464
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5_text",
+		"text-generation",
+		"system-one",
+		"system-two",
+		"blocks-of-experts",
+		"typed-decisions",
+		"decision-model",
+		"calibrated-probabilities",
+		"knowledge-distillation",
+		"jev",
+		"noul",
+		"choice",
+		"score",
+		"lora",
+		"qwen3_5",
+		"dual-head",
+		"vllm",
+		"text-classification",
+		"en",
+		"dataset:SargeDev/jev-distill-corpus-v3",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"model-index",
+		"eval-results",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 7,
+	"usedStorage": 54700683842
 }

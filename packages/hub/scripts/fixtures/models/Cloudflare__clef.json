@@ -107,6 +107,7 @@
 	],
 	"_id": "6abd7bf73b342d55f8776279",
 	"id": "Cloudflare/clef",
+	"author": "Cloudflare",
 	"cardData": {
 		"license": "apache-2.0",
 		"library_name": "transformers",
@@ -127,10 +128,45 @@
 			"custom-code"
 		]
 	},
+	"createdAt": "2026-09-30T21:15:35.000Z",
+	"downloads": 26297,
+	"downloadsAllTime": 26297,
+	"gated": false,
+	"lastModified": "2026-10-19T15:07:45.000Z",
+	"likes": 2291,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27356728560
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"clef",
+		"cloudflare",
+		"systemone",
+		"decision-model",
+		"qwen3.8",
+		"post-train",
+		"image-text-to-typed-output",
+		"multimodal",
+		"structured-output",
+		"classification",
+		"custom-code",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"eval-results",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 49,
+	"usedStorage": 54989721117
 }

@@ -91,6 +91,7 @@
 	],
 	"_id": "6abbfbc5dc2ce6bc6a877182",
 	"id": "BAAI/AREX-2",
+	"author": "BAAI",
 	"cardData": {
 		"license": "apache-2.0",
 		"library_name": "transformers",
@@ -107,10 +108,40 @@
 			"safetensors"
 		]
 	},
+	"createdAt": "2026-09-29T17:56:21.000Z",
+	"downloads": 2875,
+	"downloadsAllTime": 2875,
+	"gated": false,
+	"lastModified": "2026-10-01T07:13:17.000Z",
+	"likes": 137,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27356728560
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"agent",
+		"deep-research",
+		"reasoning",
+		"tool-use",
+		"long-context",
+		"self-improvement",
+		"conversational",
+		"arxiv:2609.38288",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 12,
+	"usedStorage": 54735776890
 }

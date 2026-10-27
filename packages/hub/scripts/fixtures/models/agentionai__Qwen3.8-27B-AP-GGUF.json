@@ -71,6 +71,7 @@
 	],
 	"_id": "6ab2ab0dfe5614d2e08dbff8",
 	"id": "agentionai/Qwen3.8-27B-AP-GGUF",
+	"author": "agentionai",
 	"cardData": {
 		"base_model": [
 			"Qwen/Qwen3.8-27B"
@@ -86,6 +87,10 @@
 			"agentionai"
 		]
 	},
+	"createdAt": "2026-09-22T16:21:33.000Z",
+	"downloads": 877671,
+	"downloadsAllTime": 900925,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -94,5 +99,25 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 9607980896
-	}
+	},
+	"lastModified": "2026-10-23T20:19:45.000Z",
+	"likes": 98,
+	"library_name": "gguf",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"qwen3.8-27b",
+		"imatrix",
+		"agentionai",
+		"image-text-to-text",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 8,
+	"usedStorage": 195657308470
 }

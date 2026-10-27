@@ -63,6 +63,7 @@
 	],
 	"_id": "6a7f2f68690f1dca70192078",
 	"id": "lmstudio-community/Qwen3.8-27B-MLX-4bit",
+	"author": "lmstudio-community",
 	"cardData": {
 		"library_name": "transformers",
 		"license": "apache-2.0",
@@ -72,11 +73,36 @@
 		],
 		"base_model": "Qwen/Qwen3.8-27B"
 	},
+	"createdAt": "2026-08-14T15:08:24.000Z",
+	"downloads": 3586440,
+	"downloadsAllTime": 10509859,
+	"gated": false,
+	"lastModified": "2026-08-14T15:08:37.000Z",
+	"likes": 115,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"U32": 26893352960,
 			"BF16": 463375600
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"mlx",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"4-bit",
+		"region:us"
+	],
+	"trendingScore": 13,
+	"usedStorage": 16074530924
 }

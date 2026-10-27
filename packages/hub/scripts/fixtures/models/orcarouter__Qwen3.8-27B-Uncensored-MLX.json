@@ -323,6 +323,7 @@
 	],
 	"_id": "6a83166a2d112a3a129032c3",
 	"id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
+	"author": "orcarouter",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -352,11 +353,48 @@
 			"reasoning"
 		]
 	},
+	"createdAt": "2026-08-17T14:10:50.000Z",
+	"downloads": 57721,
+	"downloadsAllTime": 268126,
+	"gated": false,
+	"lastModified": "2026-10-27T06:56:47.000Z",
+	"likes": 1598,
+	"library_name": "mlx",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"U32": 26893352960,
 			"BF16": 463375600
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"mlx",
+		"safetensors",
+		"qwen3_5",
+		"abliterated",
+		"qwen3.8",
+		"uncensored",
+		"ai-red-team",
+		"red-teaming",
+		"apple-silicon",
+		"quantized",
+		"4-bit",
+		"8-bit",
+		"vision-language",
+		"image-text-to-text",
+		"multimodal",
+		"function-calling",
+		"reasoning",
+		"conversational",
+		"en",
+		"zh",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"region:us"
+	],
+	"trendingScore": 17,
+	"usedStorage": 78547041704
 }

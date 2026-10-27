@@ -143,6 +143,7 @@
 	],
 	"_id": "6ad08350e326785a5604110f",
 	"id": "perplexity-ai/pplx-decider-v1.2",
+	"author": "perplexity-ai",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -157,10 +158,36 @@
 			"decision-model"
 		]
 	},
+	"createdAt": "2026-10-15T07:40:00.000Z",
+	"downloads": 2402,
+	"downloadsAllTime": 2402,
+	"gated": false,
+	"lastModified": "2026-10-19T10:25:41.000Z",
+	"likes": 50,
+	"library_name": "pytorch",
+	"pipeline_tag": "text-classification",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 26085330160
 		},
 		"total": 26085330160
-	}
+	},
+	"tags": [
+		"pytorch",
+		"safetensors",
+		"qwen3_5",
+		"classification",
+		"multimodal",
+		"custom-code",
+		"decider",
+		"decision-model",
+		"text-classification",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"region:us"
+	],
+	"trendingScore": 17,
+	"usedStorage": 52193403540
 }

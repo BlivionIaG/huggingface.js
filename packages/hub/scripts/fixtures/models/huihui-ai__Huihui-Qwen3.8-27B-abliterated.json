@@ -131,6 +131,7 @@
 	],
 	"_id": "6a81734082d78ce589a6b0bb",
 	"id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
+	"author": "huihui-ai",
 	"cardData": {
 		"library_name": "transformers",
 		"license": "apache-2.0",
@@ -145,10 +146,37 @@
 			"qwen3"
 		]
 	},
+	"createdAt": "2026-08-16T08:22:24.000Z",
+	"downloads": 34377,
+	"downloadsAllTime": 142463,
+	"gated": false,
+	"lastModified": "2026-08-24T03:47:39.000Z",
+	"likes": 639,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"abliterated",
+		"uncensored",
+		"huihui",
+		"qwen3",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 26,
+	"usedStorage": 73831345328
 }

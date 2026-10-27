@@ -131,6 +131,7 @@
 	],
 	"_id": "6ace2660b808fb60e9a84f46",
 	"id": "sabicap/sabi-noema",
+	"author": "sabicap",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -146,11 +147,40 @@
 			"conversational"
 		]
 	},
+	"createdAt": "2026-10-13T12:38:56.000Z",
+	"downloads": 1294,
+	"downloadsAllTime": 1294,
+	"gated": false,
+	"lastModified": "2026-10-19T22:18:36.000Z",
+	"likes": 41,
+	"library_name": "transformers",
+	"pipeline_tag": "text-generation",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27356720112,
 			"F32": 8448
 		},
 		"total": 27356728560
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"agentic",
+		"reinforcement-learning",
+		"tool-use",
+		"hybrid-attention",
+		"qwen3.8",
+		"conversational",
+		"text-generation",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 12,
+	"usedStorage": 54726637647
 }

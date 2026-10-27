@@ -91,6 +91,7 @@
 	],
 	"_id": "6a7f364cccffc05984ed3c4f",
 	"id": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+	"author": "peculiar-ragdoll",
 	"cardData": {
 		"license": "apache-2.0",
 		"language": [
@@ -113,6 +114,10 @@
 			"vision"
 		]
 	},
+	"createdAt": "2026-08-14T15:37:48.000Z",
+	"downloads": 1337555,
+	"downloadsAllTime": 2454853,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -122,5 +127,35 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 9608001856
-	}
+	},
+	"lastModified": "2026-10-19T18:24:09.000Z",
+	"likes": 252,
+	"library_name": "gguf",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"llama.cpp",
+		"qwen3_5",
+		"qwen3.8",
+		"mtp",
+		"speculative-decoding",
+		"token-efficient",
+		"agentic-coding",
+		"vision",
+		"image-text-to-text",
+		"en",
+		"zh",
+		"arxiv:2604.18556",
+		"arxiv:2605.00649",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"imatrix",
+		"conversational"
+	],
+	"trendingScore": 7,
+	"usedStorage": 629405945820
 }

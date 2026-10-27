@@ -71,6 +71,7 @@
 	],
 	"_id": "6a83593d98411618d686d175",
 	"id": "Jundot/Qwen3.8-27B-oQ4e-mtp",
+	"author": "Jundot",
 	"cardData": {
 		"library_name": "mlx",
 		"license": "apache-2.0",
@@ -85,11 +86,37 @@
 			"mtp"
 		]
 	},
+	"createdAt": "2026-08-17T18:55:57.000Z",
+	"downloads": 19636,
+	"downloadsAllTime": 43509,
+	"gated": false,
+	"lastModified": "2026-10-25T01:00:30.000Z",
+	"likes": 75,
+	"library_name": "mlx",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"U32": 27265597440,
 			"BF16": 515830512
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"mlx",
+		"safetensors",
+		"qwen3_5",
+		"oq",
+		"quantized",
+		"mtp",
+		"image-text-to-text",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"4-bit",
+		"region:us"
+	],
+	"trendingScore": 8,
+	"usedStorage": 16984490878
 }

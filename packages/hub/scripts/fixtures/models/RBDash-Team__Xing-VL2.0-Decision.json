@@ -107,6 +107,7 @@
 	],
 	"_id": "6ad976de1d54f71d99343d56",
 	"id": "RBDash-Team/Xing-VL2.0-Decision",
+	"author": "RBDash-Team",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -119,10 +120,37 @@
 			"vision"
 		]
 	},
+	"createdAt": "2026-10-22T02:37:18.000Z",
+	"downloads": 1871,
+	"downloadsAllTime": 1871,
+	"gated": false,
+	"lastModified": "2026-10-27T03:46:01.000Z",
+	"likes": 14,
+	"library_name": "transformers",
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 26085330160
 		},
 		"total": 26085330160
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3_5",
+		"image-text-to-text",
+		"decision-index",
+		"classification",
+		"multimodal",
+		"vision",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 14,
+	"usedStorage": 52193402988
 }

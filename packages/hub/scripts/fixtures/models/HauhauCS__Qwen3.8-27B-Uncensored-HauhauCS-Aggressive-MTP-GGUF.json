@@ -87,6 +87,7 @@
 	],
 	"_id": "6a832587e74e9a9edfb67ff9",
 	"id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+	"author": "HauhauCS",
 	"cardData": {
 		"license": "apache-2.0",
 		"tags": [
@@ -107,6 +108,10 @@
 		"pipeline_tag": "image-text-to-text",
 		"base_model": "Qwen/Qwen3.8-27B"
 	},
+	"createdAt": "2026-08-17T15:15:19.000Z",
+	"downloads": 2350580,
+	"downloadsAllTime": 5549580,
+	"gated": false,
 	"gguf": {
 		"total": 1863907840,
 		"architecture": "qwen35",
@@ -115,5 +120,31 @@
 		"bos_token": "<|endoftext|>",
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 903453952
-	}
+	},
+	"lastModified": "2026-08-17T22:02:10.000Z",
+	"likes": 2127,
+	"pipeline_tag": "image-text-to-text",
+	"private": false,
+	"tags": [
+		"gguf",
+		"uncensored",
+		"qwen3.8",
+		"multimodal",
+		"vision",
+		"mtp",
+		"speculative-decoding",
+		"fastmtp",
+		"image-text-to-text",
+		"en",
+		"zh",
+		"multilingual",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us",
+		"conversational"
+	],
+	"trendingScore": 116,
+	"usedStorage": 172466425216
 }

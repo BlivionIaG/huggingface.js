@@ -23,6 +23,7 @@
 	],
 	"_id": "6a83daec88d81aa918ab8538",
 	"id": "incoai/Qwen3.8-27B-DFlash2",
+	"author": "incoai",
 	"cardData": {
 		"license": "apache-2.0",
 		"library_name": "transformers",
@@ -40,10 +41,38 @@
 			"vllm"
 		]
 	},
+	"createdAt": "2026-08-18T04:09:16.000Z",
+	"downloads": 370926,
+	"downloadsAllTime": 875063,
+	"gated": false,
+	"lastModified": "2026-09-17T22:40:34.000Z",
+	"likes": 291,
+	"library_name": "transformers",
+	"pipeline_tag": "text-generation",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 1924404480
 		},
 		"total": 1924404480
-	}
+	},
+	"tags": [
+		"transformers",
+		"safetensors",
+		"qwen3",
+		"dflash2",
+		"speculative-decoding",
+		"block-diffusion",
+		"draft-model",
+		"sglang",
+		"vllm",
+		"text-generation",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:finetune:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"text-generation-inference",
+		"region:us"
+	],
+	"trendingScore": 12,
+	"usedStorage": 3849104785
 }

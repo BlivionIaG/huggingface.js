@@ -283,6 +283,7 @@
 	],
 	"_id": "6a85c354733ca524c25bd6b5",
 	"id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+	"author": "OBLITERATUS",
 	"cardData": {
 		"license": "apache-2.0",
 		"base_model": "Qwen/Qwen3.8-27B",
@@ -301,6 +302,10 @@
 		"model_type": "qwen3",
 		"pipeline_tag": "text-generation"
 	},
+	"createdAt": "2026-08-19T14:53:08.000Z",
+	"downloads": 520142,
+	"downloadsAllTime": 2093952,
+	"gated": false,
 	"gguf": {
 		"total": 27320697856,
 		"architecture": "qwen35",
@@ -310,10 +315,37 @@
 		"eos_token": "<|im_end|>",
 		"totalFileSize": 15420441632
 	},
+	"lastModified": "2026-08-24T17:47:52.000Z",
+	"likes": 1571,
+	"library_name": "mlx",
+	"pipeline_tag": "text-generation",
+	"private": false,
 	"safetensors": {
 		"parameters": {
 			"BF16": 27781427952
 		},
 		"total": 27781427952
-	}
+	},
+	"tags": [
+		"mlx",
+		"safetensors",
+		"gguf",
+		"qwen3_5",
+		"abliterated",
+		"uncensored",
+		"obliteratus",
+		"qwen3",
+		"qwen3.8",
+		"red-team",
+		"ai-safety-research",
+		"text-generation",
+		"conversational",
+		"base_model:Qwen/Qwen3.8-27B",
+		"base_model:quantized:Qwen/Qwen3.8-27B",
+		"license:apache-2.0",
+		"endpoints_compatible",
+		"region:us"
+	],
+	"trendingScore": 47,
+	"usedStorage": 995163877411
 }
