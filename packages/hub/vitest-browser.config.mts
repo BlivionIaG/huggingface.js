@@ -21,6 +21,7 @@ export default defineConfig({
 			"src/utils/sha256-abort.spec.ts",
 			// Because it starts a local server, and reads the fixtures from the disk
 			"scripts/mock-hub.spec.ts",
+			"scripts/mock-site.spec.ts",
 		],
 	},
 });

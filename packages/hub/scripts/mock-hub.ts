@@ -24,7 +24,7 @@ import { join } from "node:path";
 const FIXTURES_DIR = join(__dirname, "fixtures");
 const PORT = Number(process.env.PORT ?? 8787);
 
-interface ModelInfo {
+export interface ModelInfo {
 	id: string;
 	author?: string;
 	cardData?: { base_model?: string | string[] };
@@ -34,7 +34,9 @@ interface ModelInfo {
 	[key: string]: unknown;
 }
 
-async function loadFixtures(fixturesDir?: string): Promise<{ models: ModelInfo[]; configs: Map<string, unknown> }> {
+export async function loadFixtures(
+	fixturesDir?: string,
+): Promise<{ models: ModelInfo[]; configs: Map<string, unknown> }> {
 	const root = fixturesDir ?? FIXTURES_DIR;
 	const models: ModelInfo[] = [];
 	const configs = new Map<string, unknown>();

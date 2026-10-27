@@ -30,6 +30,7 @@ import { writeFile } from "node:fs/promises";
 import { listQuantVariants } from "../src/lib/list-quant-variants.js";
 import { stripArgumentSeparator } from "./args.js";
 import { startMockHub } from "./mock-hub.js";
+import { escapeHtml, MENU_STYLES, renderQuantizationMenu } from "./widget.js";
 
 stripArgumentSeparator();
 
@@ -148,40 +149,10 @@ async function main() {
 	await hub?.close();
 }
 
-function escapeHtml(value: string): string {
-	return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
-
 /**
  * Renders a mock of the quantization widget of a model page.
  */
 function renderHtml(rows: QuantVariantRow[], options: { hardware?: Hardware; contextLength?: number }): string {
-	const groups = new Map<number, QuantVariantRow[]>();
-	for (const row of rows) {
-		const bits = row.bits ?? 16;
-		groups.set(bits, [...(groups.get(bits) ?? []), row]);
-	}
-
-	const groupHtml = [...groups.entries()]
-		.sort((a, b) => a[0] - b[0])
-		.map(([bits, group]) => {
-			const chips = group
-				.map((row) => {
-					const requirement = getQuantVariantMemoryRequirement(row, {
-						contextLength: options.contextLength,
-					});
-					const fit = options.hardware ? computeFit(requirement, options.hardware.memoryBytes) : undefined;
-					const state = fit?.state ?? "unknown";
-					const icon = state === "fits" ? "✅" : state === "tight" ? "🟠" : state === "no-fit" ? "❌" : "";
-					return `<span class="chip ${state}">${icon} ${escapeHtml(row.label)} <span class="size">${formatBytes(
-						row.sizeBytes,
-					)}</span></span>`;
-				})
-				.join("\n");
-			return `<div class="group"><div class="bits">${bits}-bit</div><div class="chips">${chips}</div></div>`;
-		})
-		.join("\n");
-
 	return `<!doctype html>
 <html lang="en">
 <head>
@@ -194,14 +165,7 @@ function renderHtml(rows: QuantVariantRow[], options: { hardware?: Hardware; con
 	h1 { font-size: 18px; margin: 0 0 4px; }
 	.sub { color: #6b7280; font-size: 13px; margin-bottom: 16px; }
 	.hardware { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 12px; font-size: 14px; margin-bottom: 16px; background: #fff; }
-	.group { display: flex; gap: 16px; padding: 10px 0; border-top: 1px solid #f3f4f6; }
-	.bits { width: 56px; flex: none; color: #6b7280; font-size: 13px; padding-top: 4px; }
-	.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-	.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 5px 10px; font-size: 13px; background: #fff; }
-	.chip.fits { border-color: #bbf7d0; background: #f0fdf4; }
-	.chip.tight { border-color: #fed7aa; background: #fff7ed; }
-	.chip.no-fit { border-color: #e5e7eb; background: #f9fafb; color: #9ca3af; }
-	.size { color: #6b7280; font-size: 12px; }
+${MENU_STYLES}
 </style>
 </head>
 <body>
@@ -217,7 +181,7 @@ function renderHtml(rows: QuantVariantRow[], options: { hardware?: Hardware; con
 					)})</div>`
 				: ""
 		}
-		${groupHtml}
+		<div class="menu">${renderQuantizationMenu(rows, options)}</div>
 	</div>
 </body>
 </html>

@@ -54,3 +54,23 @@ Or let the menu start the mock hub for the time of the script:
 ```bash
 pnpm --filter @huggingface/hub quant-variants -- org/model --offline
 ```
+
+## Seeing them on a model page
+
+The mock site serves the pages of the Hub, built from the API of the mock hub:
+
+```bash
+pnpm --filter @huggingface/hub mock-site
+```
+
+- `http://localhost:8787/` lists the models of the fixtures.
+- `http://localhost:8787/<owner>/<model>` shows a model page, with the quantization menu of the
+  model.
+
+The hardware the menu is compared to is chosen with the `hardware` query parameter, and the
+memory of a custom hardware with the `memory` one:
+
+```bash
+http://localhost:8787/org/model?hardware=NVIDIA%20RTX%204090
+http://localhost:8787/org/model?memory=64
+```

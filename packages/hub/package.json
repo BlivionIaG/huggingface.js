@@ -62,7 +62,8 @@
 		"debug-xet": "tsx scripts/debug-xet.ts",
 		"quant-variants": "tsx scripts/quant-variants.ts",
 		"mock-hub": "tsx scripts/mock-hub.ts",
-		"dump-fixtures": "tsx scripts/dump-fixtures.ts"
+		"dump-fixtures": "tsx scripts/dump-fixtures.ts",
+		"mock-site": "tsx scripts/mock-site.ts"
 	},
 	"dependencies": {
 		"@huggingface/tasks": "workspace:^",
