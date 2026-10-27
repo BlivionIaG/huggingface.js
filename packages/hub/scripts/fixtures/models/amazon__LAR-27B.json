@@ -1,0 +1,140 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".eval_results/swe_bench_verified.yaml",
+			"size": 182
+		},
+		{
+			"rfilename": ".eval_results/terminal_bench_2_0.yaml",
+			"size": 183
+		},
+		{
+			"rfilename": ".eval_results/terminal_bench_2_1.yaml",
+			"size": 185
+		},
+		{
+			"rfilename": ".gitattributes",
+			"size": 1570
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "README.md",
+			"size": 4213
+		},
+		{
+			"rfilename": "assets/ResultPlot.png",
+			"size": 627011
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 4312
+		},
+		{
+			"rfilename": "crc32.txt",
+			"size": 238
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00000-of-00011.safetensors",
+			"size": 5279848832
+		},
+		{
+			"rfilename": "model-00001-of-00011.safetensors",
+			"size": 3819518936
+		},
+		{
+			"rfilename": "model-00002-of-00011.safetensors",
+			"size": 5363684936
+		},
+		{
+			"rfilename": "model-00003-of-00011.safetensors",
+			"size": 5285751752
+		},
+		{
+			"rfilename": "model-00004-of-00011.safetensors",
+			"size": 5348253856
+		},
+		{
+			"rfilename": "model-00005-of-00011.safetensors",
+			"size": 5207666840
+		},
+		{
+			"rfilename": "model-00006-of-00011.safetensors",
+			"size": 5353331560
+		},
+		{
+			"rfilename": "model-00007-of-00011.safetensors",
+			"size": 5231255488
+		},
+		{
+			"rfilename": "model-00008-of-00011.safetensors",
+			"size": 4363732552
+		},
+		{
+			"rfilename": "model-00009-of-00011.safetensors",
+			"size": 5317838664
+		},
+		{
+			"rfilename": "model-00010-of-00011.safetensors",
+			"size": 3221224936
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 83871
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 17928
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6acfbc55802b9dda80350f83",
+	"id": "amazon/LAR-27B",
+	"cardData": {
+		"license": "apache-2.0",
+		"datasets": [
+			"nebius/SWE-rebench"
+		],
+		"language": [
+			"en"
+		],
+		"base_model": [
+			"Qwen/Qwen3.8-27B"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 26895998464
+		},
+		"total": 26895998464
+	}
+}

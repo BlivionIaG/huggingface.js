@@ -1,0 +1,124 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1570
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "README.md",
+			"size": 18656
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 46673
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 214
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00001-of-00005.safetensors",
+			"size": 4998298356
+		},
+		{
+			"rfilename": "model-00002-of-00005.safetensors",
+			"size": 4968398300
+		},
+		{
+			"rfilename": "model-00003-of-00005.safetensors",
+			"size": 4962827452
+		},
+		{
+			"rfilename": "model-00004-of-00005.safetensors",
+			"size": 4959033888
+		},
+		{
+			"rfilename": "model-00005-of-00005.safetensors",
+			"size": 3950531428
+		},
+		{
+			"rfilename": "model-extra-00001-of-00001.safetensors",
+			"size": 849400424
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 193894
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "recipe.yaml",
+			"size": 33998
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 19989424
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 1123
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6a85204670444e8ed100263b",
+	"id": "orcarouter/Qwen3.8-27B-Uncensored-NVFP4",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": "Qwen/Qwen3.8-27B",
+		"base_model_relation": "quantized",
+		"pipeline_tag": "image-text-to-text",
+		"library_name": "transformers",
+		"language": [
+			"en",
+			"zh"
+		],
+		"tags": [
+			"abliterated",
+			"qwen",
+			"qwen3",
+			"qwen3.8",
+			"uncensored",
+			"ai-red-team",
+			"red-teaming",
+			"nvfp4",
+			"fp4",
+			"fp8",
+			"mixed-precision",
+			"compressed-tensors",
+			"vllm",
+			"vision-language",
+			"function-calling",
+			"reasoning",
+			"mtp"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 3454464784,
+			"F8_E4M3": 9353297920,
+			"U8": 14973665280
+		},
+		"total": 21232112736
+	}
+}

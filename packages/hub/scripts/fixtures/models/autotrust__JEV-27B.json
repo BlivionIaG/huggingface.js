@@ -1,0 +1,390 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1846
+		},
+		{
+			"rfilename": "27b-2.jpg",
+			"size": 167419
+		},
+		{
+			"rfilename": "27b-3.jpg",
+			"size": 191743
+		},
+		{
+			"rfilename": "27b1.jpg",
+			"size": 185890
+		},
+		{
+			"rfilename": "README.md",
+			"size": 64236
+		},
+		{
+			"rfilename": "adapter/README.md",
+			"size": 5128
+		},
+		{
+			"rfilename": "adapter/adapter_config.json",
+			"size": 1319
+		},
+		{
+			"rfilename": "adapter/adapter_model.safetensors",
+			"size": 435268528
+		},
+		{
+			"rfilename": "adapter_vllm/adapter_config.json",
+			"size": 1335
+		},
+		{
+			"rfilename": "adapter_vllm/adapter_model.safetensors",
+			"size": 451489776
+		},
+		{
+			"rfilename": "adapter_vllm/decision_head.json",
+			"size": 1315
+		},
+		{
+			"rfilename": "assets/autotrust_gurusearch_demo.png",
+			"size": 403877
+		},
+		{
+			"rfilename": "assets/autotrust_jev_demo.png",
+			"size": 399516
+		},
+		{
+			"rfilename": "calibration.json",
+			"size": 999
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 3052
+		},
+		{
+			"rfilename": "head.safetensors",
+			"size": 491768
+		},
+		{
+			"rfilename": "judge_config.json",
+			"size": 1431
+		},
+		{
+			"rfilename": "model-00001-of-00013.safetensors",
+			"size": 4243748136
+		},
+		{
+			"rfilename": "model-00002-of-00013.safetensors",
+			"size": 4209081448
+		},
+		{
+			"rfilename": "model-00003-of-00013.safetensors",
+			"size": 4220735616
+		},
+		{
+			"rfilename": "model-00004-of-00013.safetensors",
+			"size": 4167219824
+		},
+		{
+			"rfilename": "model-00005-of-00013.safetensors",
+			"size": 4198699416
+		},
+		{
+			"rfilename": "model-00006-of-00013.safetensors",
+			"size": 4167219824
+		},
+		{
+			"rfilename": "model-00007-of-00013.safetensors",
+			"size": 4198699416
+		},
+		{
+			"rfilename": "model-00008-of-00013.safetensors",
+			"size": 4167219824
+		},
+		{
+			"rfilename": "model-00009-of-00013.safetensors",
+			"size": 4220735672
+		},
+		{
+			"rfilename": "model-00010-of-00013.safetensors",
+			"size": 4145183576
+		},
+		{
+			"rfilename": "model-00011-of-00013.safetensors",
+			"size": 4220735672
+		},
+		{
+			"rfilename": "model-00012-of-00013.safetensors",
+			"size": 4167219824
+		},
+		{
+			"rfilename": "model-00013-of-00013.safetensors",
+			"size": 3465597752
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 71121
+		},
+		{
+			"rfilename": "reports/b0_qwen35_9b.md",
+			"size": 6949
+		},
+		{
+			"rfilename": "reports/b0_qwen38_27b.md",
+			"size": 5401
+		},
+		{
+			"rfilename": "reports/data_audit.md",
+			"size": 3006
+		},
+		{
+			"rfilename": "reports/eval_27b_bundle.md",
+			"size": 3767
+		},
+		{
+			"rfilename": "reports/eval_s2_27b.md",
+			"size": 8637
+		},
+		{
+			"rfilename": "reports/eval_s2_9b.md",
+			"size": 8635
+		},
+		{
+			"rfilename": "reports/eval_s2_9b_epoch1.md",
+			"size": 8635
+		},
+		{
+			"rfilename": "reports/eval_v08_bundle.md",
+			"size": 3765
+		},
+		{
+			"rfilename": "reports/fanout_nopc.json",
+			"size": 381
+		},
+		{
+			"rfilename": "reports/fanout_pc.json",
+			"size": 424
+		},
+		{
+			"rfilename": "reports/humaneval_27b_base.json",
+			"size": 54262
+		},
+		{
+			"rfilename": "reports/humaneval_27b_bundle.json",
+			"size": 54270
+		},
+		{
+			"rfilename": "reports/humaneval_base.json",
+			"size": 62994
+		},
+		{
+			"rfilename": "reports/humaneval_base_fp32norm.json",
+			"size": 63213
+		},
+		{
+			"rfilename": "reports/humaneval_v08.json",
+			"size": 63414
+		},
+		{
+			"rfilename": "reports/humaneval_v08_bundle.json",
+			"size": 63222
+		},
+		{
+			"rfilename": "reports/humaneval_vllm_27b.json",
+			"size": 54144
+		},
+		{
+			"rfilename": "reports/humaneval_vllm_9b.json",
+			"size": 62778
+		},
+		{
+			"rfilename": "reports/m0_qwen35_9b.md",
+			"size": 2783
+		},
+		{
+			"rfilename": "reports/realworld_27b.json",
+			"size": 49540
+		},
+		{
+			"rfilename": "reports/realworld_9b.json",
+			"size": 49455
+		},
+		{
+			"rfilename": "reports/review/step0500.md",
+			"size": 5423
+		},
+		{
+			"rfilename": "reports/review/step0500_27b.md",
+			"size": 5441
+		},
+		{
+			"rfilename": "reports/review/step1500.md",
+			"size": 5423
+		},
+		{
+			"rfilename": "reports/review/step2000_27b.md",
+			"size": 5441
+		},
+		{
+			"rfilename": "reports/review/step2500.md",
+			"size": 5422
+		},
+		{
+			"rfilename": "reports/vllm_decisions_27b.json",
+			"size": 1164
+		},
+		{
+			"rfilename": "reports/vllm_decisions_9b.json",
+			"size": 1331
+		},
+		{
+			"rfilename": "reports/vllm_openai_9b.json",
+			"size": 227
+		},
+		{
+			"rfilename": "reports/vllm_openai_9b_c256.json",
+			"size": 131
+		},
+		{
+			"rfilename": "serve_decide.py",
+			"size": 23030
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 19989325
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 1124
+		}
+	],
+	"_id": "6ab66ffdf7bd8732d74b7264",
+	"id": "autotrust/JEV-27B",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": "Qwen/Qwen3.8-27B",
+		"base_model_relation": "finetune",
+		"datasets": [
+			"SargeDev/jev-distill-corpus-v3"
+		],
+		"language": [
+			"en"
+		],
+		"library_name": "transformers",
+		"pipeline_tag": "text-classification",
+		"tags": [
+			"system-one",
+			"system-two",
+			"blocks-of-experts",
+			"typed-decisions",
+			"decision-model",
+			"calibrated-probabilities",
+			"knowledge-distillation",
+			"jev",
+			"noul",
+			"choice",
+			"score",
+			"lora",
+			"qwen3_5",
+			"text-generation",
+			"dual-head",
+			"vllm"
+		],
+		"metrics": [
+			"kl",
+			"auroc",
+			"brier",
+			"ece"
+		],
+		"model-index": [
+			{
+				"name": "autotrust/JEV-27B (student of TypeSafe Jev 1.13)",
+				"results": [
+					{
+						"task": {
+							"type": "text-classification",
+							"name": "typed decisions (noul / choice / score) — agreement with the TypeSafe Jev 1.13 teacher"
+						},
+						"dataset": {
+							"type": "SargeDev/jev-distill-corpus-v3",
+							"name": "jev-distill-corpus-v3 · test_set_30k",
+							"split": "test_set_30k"
+						},
+						"metrics": [
+							{
+								"type": "kl_divergence",
+								"name": "mean KL(target ‖ model), all test rows (25,376 of 29,955 targets are TypeSafe Jev 1.13 distributions)",
+								"value": 0.0186,
+								"verified": false
+							},
+							{
+								"type": "auroc",
+								"name": "noul AUROC",
+								"value": 0.996,
+								"verified": false
+							},
+							{
+								"type": "brier",
+								"name": "noul Brier (vs. target probability, all rows)",
+								"value": 0.0013,
+								"verified": false
+							},
+							{
+								"type": "mae",
+								"name": "score expected-value MAE (0–5 scale)",
+								"value": 0.098,
+								"verified": false
+							},
+							{
+								"type": "ece",
+								"name": "ECE (15 bins, after temperature)",
+								"value": 0.0009,
+								"verified": false
+							},
+							{
+								"type": "accuracy",
+								"name": "choice top-1 agreement (all rows)",
+								"value": 0.903,
+								"verified": false
+							},
+							{
+								"type": "accuracy",
+								"name": "choice top-1 agreement (decisive-target rows, top-2 gap ≥ 0.1)",
+								"value": 0.958,
+								"verified": false
+							}
+						]
+					},
+					{
+						"task": {
+							"type": "text-generation",
+							"name": "code generation — System 2 path (base lm_head, adapter off)"
+						},
+						"dataset": {
+							"type": "openai/openai_humaneval",
+							"name": "HumanEval",
+							"split": "test"
+						},
+						"metrics": [
+							{
+								"type": "pass@1",
+								"name": "pass@1 (greedy, completion-style prompt)",
+								"value": 0.78,
+								"verified": false
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 26895998464
+		},
+		"total": 26895998464
+	}
+}

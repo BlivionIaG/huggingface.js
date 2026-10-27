@@ -1,0 +1,75 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1570
+		},
+		{
+			"rfilename": "README.md",
+			"size": 6746
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 9993
+		},
+		{
+			"rfilename": "config.json",
+			"size": 22564
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 214
+		},
+		{
+			"rfilename": "model.safetensors",
+			"size": 22568192096
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 164371
+		},
+		{
+			"rfilename": "model_mtp.safetensors",
+			"size": 849400392
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 19989325
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 1047
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6a7d804355bb95e87d31c535",
+	"id": "unsloth/Qwen3.8-27B-NVFP4",
+	"cardData": {
+		"base_model": [
+			"Qwen/Qwen3.8-27B"
+		],
+		"license": "apache-2.0",
+		"tags": [
+			"unsloth"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 1758366992,
+			"F8_E4M3": 10624696320,
+			"U8": 7486832640
+		},
+		"total": 19869895952
+	}
+}

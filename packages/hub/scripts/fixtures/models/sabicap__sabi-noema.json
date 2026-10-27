@@ -1,0 +1,156 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1635
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "README.md",
+			"size": 7991
+		},
+		{
+			"rfilename": "SHA256SUMS",
+			"size": 2736
+		},
+		{
+			"rfilename": "assets/sabi-noema-tokens.png",
+			"size": 206071
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8976
+		},
+		{
+			"rfilename": "config.json",
+			"size": 3637
+		},
+		{
+			"rfilename": "examples/chat.py",
+			"size": 2237
+		},
+		{
+			"rfilename": "examples/llama_cpp.md",
+			"size": 1337
+		},
+		{
+			"rfilename": "examples/serve_vllm.sh",
+			"size": 2194
+		},
+		{
+			"rfilename": "examples/tools.py",
+			"size": 2503
+		},
+		{
+			"rfilename": "examples/transformers_generate.py",
+			"size": 2114
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00001-of-00012.safetensors",
+			"size": 4997475144
+		},
+		{
+			"rfilename": "model-00002-of-00012.safetensors",
+			"size": 4965146440
+		},
+		{
+			"rfilename": "model-00003-of-00012.safetensors",
+			"size": 4974752704
+		},
+		{
+			"rfilename": "model-00004-of-00012.safetensors",
+			"size": 4902231760
+		},
+		{
+			"rfilename": "model-00005-of-00012.safetensors",
+			"size": 4911765152
+		},
+		{
+			"rfilename": "model-00006-of-00012.safetensors",
+			"size": 2542796928
+		},
+		{
+			"rfilename": "model-00007-of-00012.safetensors",
+			"size": 4965229536
+		},
+		{
+			"rfilename": "model-00008-of-00012.safetensors",
+			"size": 4996789296
+		},
+		{
+			"rfilename": "model-00009-of-00012.safetensors",
+			"size": 4924268384
+		},
+		{
+			"rfilename": "model-00010-of-00012.safetensors",
+			"size": 4974752704
+		},
+		{
+			"rfilename": "model-00011-of-00012.safetensors",
+			"size": 4924268384
+		},
+		{
+			"rfilename": "model-00012-of-00012.safetensors",
+			"size": 2634145824
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 111073
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 17952
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6ace2660b808fb60e9a84f46",
+	"id": "sabicap/sabi-noema",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": "Qwen/Qwen3.8-27B",
+		"base_model_relation": "finetune",
+		"pipeline_tag": "text-generation",
+		"library_name": "transformers",
+		"tags": [
+			"agentic",
+			"reinforcement-learning",
+			"tool-use",
+			"hybrid-attention",
+			"qwen3.8",
+			"conversational"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 27356720112,
+			"F32": 8448
+		},
+		"total": 27356728560
+	}
+}

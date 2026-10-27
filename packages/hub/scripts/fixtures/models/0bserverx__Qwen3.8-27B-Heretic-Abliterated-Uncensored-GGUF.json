@@ -1,0 +1,761 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 9879
+		},
+		{
+			"rfilename": "GSQ-3bit/README.md",
+			"size": 1007
+		},
+		{
+			"rfilename": "GSQ-3bit/config.json",
+			"size": 3404
+		},
+		{
+			"rfilename": "GSQ-3bit/generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00001-of-00065.safetensors",
+			"size": 5085614360
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00002-of-00065.safetensors",
+			"size": 369749056
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00003-of-00065.safetensors",
+			"size": 369749056
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00004-of-00065.safetensors",
+			"size": 369749056
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00005-of-00065.safetensors",
+			"size": 347610000
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00006-of-00065.safetensors",
+			"size": 369646256
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00007-of-00065.safetensors",
+			"size": 369646256
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00008-of-00065.safetensors",
+			"size": 369646256
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00009-of-00065.safetensors",
+			"size": 347610000
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00010-of-00065.safetensors",
+			"size": 369646256
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00011-of-00065.safetensors",
+			"size": 369646256
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00012-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00013-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00014-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00015-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00016-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00017-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00018-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00019-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00020-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00021-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00022-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00023-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00024-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00025-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00026-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00027-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00028-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00029-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00030-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00031-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00032-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00033-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00034-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00035-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00036-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00037-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00038-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00039-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00040-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00041-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00042-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00043-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00044-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00045-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00046-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00047-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00048-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00049-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00050-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00051-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00052-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00053-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00054-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00055-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00056-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00057-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00058-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00059-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00060-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00061-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00062-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00063-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00064-of-00065.safetensors",
+			"size": 369646280
+		},
+		{
+			"rfilename": "GSQ-3bit/model-00065-of-00065.safetensors",
+			"size": 347610016
+		},
+		{
+			"rfilename": "GSQ-3bit/model.safetensors.index.json",
+			"size": 105173
+		},
+		{
+			"rfilename": "GSQ-3bit/receipt.md",
+			"size": 1478
+		},
+		{
+			"rfilename": "GSQ-3bit/tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "GSQ-3bit/tokenizer_config.json",
+			"size": 17928
+		},
+		{
+			"rfilename": "Qwen3.8-27B-Heretic-Q4_K_M.gguf",
+			"size": 16547400032
+		},
+		{
+			"rfilename": "README.md",
+			"size": 35167
+		},
+		{
+			"rfilename": "RVN-BF16-mtp.gguf",
+			"size": 54259602656
+		},
+		{
+			"rfilename": "RVN-BF16.gguf",
+			"size": 53808281888
+		},
+		{
+			"rfilename": "RVN-F16-mtp.gguf",
+			"size": 54259602656
+		},
+		{
+			"rfilename": "RVN-F16.gguf",
+			"size": 53808281888
+		},
+		{
+			"rfilename": "RVN-IQ1_M-mtp.gguf",
+			"size": 8082404768
+		},
+		{
+			"rfilename": "RVN-IQ1_M-multilingual-mtp.gguf",
+			"size": 8082404832
+		},
+		{
+			"rfilename": "RVN-IQ1_M-multilingual.gguf",
+			"size": 7631084064
+		},
+		{
+			"rfilename": "RVN-IQ1_M.gguf",
+			"size": 7631084032
+		},
+		{
+			"rfilename": "RVN-IQ1_S-mtp.gguf",
+			"size": 7601145248
+		},
+		{
+			"rfilename": "RVN-IQ1_S-multilingual-mtp.gguf",
+			"size": 7601145312
+		},
+		{
+			"rfilename": "RVN-IQ1_S-multilingual.gguf",
+			"size": 7149824544
+		},
+		{
+			"rfilename": "RVN-IQ1_S.gguf",
+			"size": 7149824512
+		},
+		{
+			"rfilename": "RVN-IQ2_M-mtp.gguf",
+			"size": 10455913888
+		},
+		{
+			"rfilename": "RVN-IQ2_M-multilingual-mtp.gguf",
+			"size": 10455913952
+		},
+		{
+			"rfilename": "RVN-IQ2_M-multilingual.gguf",
+			"size": 10004593184
+		},
+		{
+			"rfilename": "RVN-IQ2_M.gguf",
+			"size": 10004593152
+		},
+		{
+			"rfilename": "RVN-IQ2_S-mtp.gguf",
+			"size": 9814234560
+		},
+		{
+			"rfilename": "RVN-IQ2_S-multilingual-mtp.gguf",
+			"size": 9814234592
+		},
+		{
+			"rfilename": "RVN-IQ2_S-multilingual.gguf",
+			"size": 9362913824
+		},
+		{
+			"rfilename": "RVN-IQ2_S.gguf",
+			"size": 9362913792
+		},
+		{
+			"rfilename": "RVN-IQ2_XS-mtp.gguf",
+			"size": 9541911968
+		},
+		{
+			"rfilename": "RVN-IQ2_XS-multilingual-mtp.gguf",
+			"size": 9541912032
+		},
+		{
+			"rfilename": "RVN-IQ2_XS-multilingual.gguf",
+			"size": 9090591264
+		},
+		{
+			"rfilename": "RVN-IQ2_XS.gguf",
+			"size": 9090591232
+		},
+		{
+			"rfilename": "RVN-IQ2_XXS-mtp.gguf",
+			"size": 8884503968
+		},
+		{
+			"rfilename": "RVN-IQ2_XXS-multilingual-mtp.gguf",
+			"size": 8884504032
+		},
+		{
+			"rfilename": "RVN-IQ2_XXS-multilingual.gguf",
+			"size": 8433183264
+		},
+		{
+			"rfilename": "RVN-IQ2_XXS.gguf",
+			"size": 8433183232
+		},
+		{
+			"rfilename": "RVN-IQ3_M-mtp.gguf",
+			"size": 13032195520
+		},
+		{
+			"rfilename": "RVN-IQ3_M-multilingual-mtp.gguf",
+			"size": 13032195552
+		},
+		{
+			"rfilename": "RVN-IQ3_M-multilingual.gguf",
+			"size": 12580874784
+		},
+		{
+			"rfilename": "RVN-IQ3_M.gguf",
+			"size": 12580874752
+		},
+		{
+			"rfilename": "RVN-IQ3_S-mtp.gguf",
+			"size": 12870649280
+		},
+		{
+			"rfilename": "RVN-IQ3_S-multilingual-mtp.gguf",
+			"size": 12870649312
+		},
+		{
+			"rfilename": "RVN-IQ3_S-multilingual.gguf",
+			"size": 12419328544
+		},
+		{
+			"rfilename": "RVN-IQ3_S.gguf",
+			"size": 12419328512
+		},
+		{
+			"rfilename": "RVN-IQ3_XS-mtp.gguf",
+			"size": 12418450880
+		},
+		{
+			"rfilename": "RVN-IQ3_XS-multilingual-mtp.gguf",
+			"size": 12418450912
+		},
+		{
+			"rfilename": "RVN-IQ3_XS-multilingual.gguf",
+			"size": 11967130144
+		},
+		{
+			"rfilename": "RVN-IQ3_XS.gguf",
+			"size": 11967130112
+		},
+		{
+			"rfilename": "RVN-IQ3_XXS-mtp.gguf",
+			"size": 11637691840
+		},
+		{
+			"rfilename": "RVN-IQ3_XXS-multilingual-mtp.gguf",
+			"size": 11637691872
+		},
+		{
+			"rfilename": "RVN-IQ3_XXS-multilingual.gguf",
+			"size": 11186371104
+		},
+		{
+			"rfilename": "RVN-IQ3_XXS.gguf",
+			"size": 11186371072
+		},
+		{
+			"rfilename": "RVN-IQ4_NL-mtp.gguf",
+			"size": 16342377696
+		},
+		{
+			"rfilename": "RVN-IQ4_NL-multilingual-mtp.gguf",
+			"size": 16253248992
+		},
+		{
+			"rfilename": "RVN-IQ4_NL-multilingual.gguf",
+			"size": 15801928224
+		},
+		{
+			"rfilename": "RVN-IQ4_NL.gguf",
+			"size": 15891056928
+		},
+		{
+			"rfilename": "RVN-IQ4_XS-mtp.gguf",
+			"size": 15645238496
+		},
+		{
+			"rfilename": "RVN-IQ4_XS-multilingual-mtp.gguf",
+			"size": 15533827552
+		},
+		{
+			"rfilename": "RVN-IQ4_XS-multilingual.gguf",
+			"size": 15082506784
+		},
+		{
+			"rfilename": "RVN-IQ4_XS.gguf",
+			"size": 15193917728
+		},
+		{
+			"rfilename": "RVN-Q2_K-mtp.gguf",
+			"size": 11162985888
+		},
+		{
+			"rfilename": "RVN-Q2_K-multilingual-mtp.gguf",
+			"size": 11162985952
+		},
+		{
+			"rfilename": "RVN-Q2_K-multilingual.gguf",
+			"size": 10711665184
+		},
+		{
+			"rfilename": "RVN-Q2_K.gguf",
+			"size": 10711665152
+		},
+		{
+			"rfilename": "RVN-Q2_K_S-mtp.gguf",
+			"size": 10699646368
+		},
+		{
+			"rfilename": "RVN-Q2_K_S-multilingual-mtp.gguf",
+			"size": 10699646432
+		},
+		{
+			"rfilename": "RVN-Q2_K_S-multilingual.gguf",
+			"size": 10248325664
+		},
+		{
+			"rfilename": "RVN-Q2_K_S.gguf",
+			"size": 10248325632
+		},
+		{
+			"rfilename": "RVN-Q3_K_L-mtp.gguf",
+			"size": 14796096736
+		},
+		{
+			"rfilename": "RVN-Q3_K_L-multilingual-mtp.gguf",
+			"size": 14796096992
+		},
+		{
+			"rfilename": "RVN-Q3_K_L-multilingual.gguf",
+			"size": 14344776224
+		},
+		{
+			"rfilename": "RVN-Q3_K_L.gguf",
+			"size": 14344775968
+		},
+		{
+			"rfilename": "RVN-Q3_K_M-mtp.gguf",
+			"size": 13752763616
+		},
+		{
+			"rfilename": "RVN-Q3_K_M-multilingual-mtp.gguf",
+			"size": 13752763872
+		},
+		{
+			"rfilename": "RVN-Q3_K_M-multilingual-vision.gguf",
+			"size": 16193856544
+		},
+		{
+			"rfilename": "RVN-Q3_K_M-multilingual.gguf",
+			"size": 13301443104
+		},
+		{
+			"rfilename": "RVN-Q3_K_M-vision.gguf",
+			"size": 16193856288
+		},
+		{
+			"rfilename": "RVN-Q3_K_M.gguf",
+			"size": 13301442848
+		},
+		{
+			"rfilename": "RVN-Q3_K_S-mtp.gguf",
+			"size": 12525274336
+		},
+		{
+			"rfilename": "RVN-Q3_K_S-multilingual-mtp.gguf",
+			"size": 12525274592
+		},
+		{
+			"rfilename": "RVN-Q3_K_S-multilingual.gguf",
+			"size": 12073953824
+		},
+		{
+			"rfilename": "RVN-Q3_K_S.gguf",
+			"size": 12073953568
+		},
+		{
+			"rfilename": "RVN-Q4_K_M-mtp.gguf",
+			"size": 16998720736
+		},
+		{
+			"rfilename": "RVN-Q4_K_M-multilingual-mtp.gguf",
+			"size": 16998720992
+		},
+		{
+			"rfilename": "RVN-Q4_K_M-multilingual-vision.gguf",
+			"size": 18745293344
+		},
+		{
+			"rfilename": "RVN-Q4_K_M-multilingual.gguf",
+			"size": 16547400224
+		},
+		{
+			"rfilename": "RVN-Q4_K_M-vision.gguf",
+			"size": 18745293088
+		},
+		{
+			"rfilename": "RVN-Q4_K_M.gguf",
+			"size": 16547399968
+		},
+		{
+			"rfilename": "RVN-Q4_K_S-mtp.gguf",
+			"size": 16037635296
+		},
+		{
+			"rfilename": "RVN-Q4_K_S-multilingual-mtp.gguf",
+			"size": 16037635552
+		},
+		{
+			"rfilename": "RVN-Q4_K_S-multilingual.gguf",
+			"size": 15586314784
+		},
+		{
+			"rfilename": "RVN-Q4_K_S.gguf",
+			"size": 15586314528
+		},
+		{
+			"rfilename": "RVN-Q5_K_M-mtp.gguf",
+			"size": 19682419936
+		},
+		{
+			"rfilename": "RVN-Q5_K_M-multilingual-mtp.gguf",
+			"size": 19682420192
+		},
+		{
+			"rfilename": "RVN-Q5_K_M-multilingual-vision.gguf",
+			"size": 21019351584
+		},
+		{
+			"rfilename": "RVN-Q5_K_M-multilingual.gguf",
+			"size": 19231099424
+		},
+		{
+			"rfilename": "RVN-Q5_K_M-vision.gguf",
+			"size": 21019351328
+		},
+		{
+			"rfilename": "RVN-Q5_K_M.gguf",
+			"size": 19231099168
+		},
+		{
+			"rfilename": "RVN-Q5_K_S-mtp.gguf",
+			"size": 19130934496
+		},
+		{
+			"rfilename": "RVN-Q5_K_S-multilingual-mtp.gguf",
+			"size": 19130934752
+		},
+		{
+			"rfilename": "RVN-Q5_K_S-multilingual.gguf",
+			"size": 18679613984
+		},
+		{
+			"rfilename": "RVN-Q5_K_S.gguf",
+			"size": 18679613728
+		},
+		{
+			"rfilename": "RVN-Q6_K-mtp.gguf",
+			"size": 22533850336
+		},
+		{
+			"rfilename": "RVN-Q6_K-multilingual-mtp.gguf",
+			"size": 22533850592
+		},
+		{
+			"rfilename": "RVN-Q6_K-multilingual.gguf",
+			"size": 22082529824
+		},
+		{
+			"rfilename": "RVN-Q6_K.gguf",
+			"size": 22082529568
+		},
+		{
+			"rfilename": "RVN-Q8_0-mtp.gguf",
+			"size": 29047084256
+		},
+		{
+			"rfilename": "RVN-Q8_0-multilingual-mtp.gguf",
+			"size": 29047084512
+		},
+		{
+			"rfilename": "RVN-Q8_0-multilingual.gguf",
+			"size": 28595763744
+		},
+		{
+			"rfilename": "RVN-Q8_0.gguf",
+			"size": 28595763488
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "mmproj-Qwen3.8-27B-Q8_0.gguf",
+			"size": 629247008
+		},
+		{
+			"rfilename": "mtp-RVN.gguf",
+			"size": 1813125184
+		},
+		{
+			"rfilename": "xet_speed_test.bin",
+			"size": 104857600
+		},
+		{
+			"rfilename": "xet_test_100mb.bin",
+			"size": 104857600
+		}
+	],
+	"_id": "6a7f62fadca4ab8bcc0a546e",
+	"id": "0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": [
+			"Qwen/Qwen3.8-27B"
+		],
+		"library_name": "transformers",
+		"tags": [
+			"qwen3.8",
+			"qwen3.5",
+			"heretic",
+			"abliterated",
+			"uncensored",
+			"roleplay",
+			"gguf",
+			"imatrix"
+		],
+		"pipeline_tag": "text-generation"
+	},
+	"gguf": {
+		"total": 26895998464,
+		"architecture": "qwen35",
+		"context_length": 262144,
+		"chat_template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- set reasoning_instructions = '' %}\n{%- if enable_thinking is undefined or enable_thinking is true %}\n    {%- set resolved_reasoning_effort = reasoning_effort|default('xhigh') %}\n    {%- if resolved_reasoning_effort not in ('xhigh', 'medium', 'low') %}\n        {{- raise_exception('Unexpected reasoning effort ' ~ reasoning_effort ~ '. Supported types are xhigh (default), medium, and low.') }}\n    {%- endif %}\n    {%- if resolved_reasoning_effort == 'xhigh' %}\n        {%- set reasoning_instructions = 'Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.' %}\n    {%- elif resolved_reasoning_effort == 'low' %}\n        {%- set reasoning_instructions = 'Reasoning effort is set to low. Keep your thinking brief and focused, moving directly to the conclusion without unnecessary elaboration.' %}\n    {%- endif %}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if reasoning_instructions %}\n        {{- reasoning_instructions + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '<|im_start|>system\\n' + (reasoning_instructions + '\\n\\n' if reasoning_instructions else '')  + content + '<|im_end|>\\n' }}\n        {%- elif reasoning_instructions %}\n            {{- '<|im_start|>system\\n' + reasoning_instructions + '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- elif reasoning_instructions %}\n        {{- '<|im_start|>system\\n' + reasoning_instructions + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if preserve_thinking is undefined or preserve_thinking is true or loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined and tool_call.arguments != '' %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | string if args_value is string else args_value | tojson | safe %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}",
+		"bos_token": "<|endoftext|>",
+		"eos_token": "<|im_end|>",
+		"totalFileSize": 16547400032
+	}
+}

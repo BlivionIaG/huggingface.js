@@ -1,0 +1,95 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1570
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "README.md",
+			"size": 2376
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 47302
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00001-of-00004.safetensors",
+			"size": 5016415582
+		},
+		{
+			"rfilename": "model-00002-of-00004.safetensors",
+			"size": 5017583687
+		},
+		{
+			"rfilename": "model-00003-of-00004.safetensors",
+			"size": 5001653251
+		},
+		{
+			"rfilename": "model-00004-of-00004.safetensors",
+			"size": 1936029038
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 212223
+		},
+		{
+			"rfilename": "oq_imatrix_report.json",
+			"size": 31213
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 17928
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6a83593d98411618d686d175",
+	"id": "Jundot/Qwen3.8-27B-oQ4e-mtp",
+	"cardData": {
+		"library_name": "mlx",
+		"license": "apache-2.0",
+		"base_model": "Qwen/Qwen3.8-27B",
+		"base_model_relation": "quantized",
+		"pipeline_tag": "image-text-to-text",
+		"tags": [
+			"mlx",
+			"oq",
+			"quantized",
+			"qwen3_5",
+			"mtp"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"U32": 27265597440,
+			"BF16": 515830512
+		},
+		"total": 27781427952
+	}
+}

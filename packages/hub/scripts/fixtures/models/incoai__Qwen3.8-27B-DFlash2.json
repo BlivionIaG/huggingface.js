@@ -1,0 +1,49 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1581
+		},
+		{
+			"rfilename": "README.md",
+			"size": 5399
+		},
+		{
+			"rfilename": "assets/dflash2-figure.png",
+			"size": 286889
+		},
+		{
+			"rfilename": "config.json",
+			"size": 1239
+		},
+		{
+			"rfilename": "model.safetensors",
+			"size": 3848817896
+		}
+	],
+	"_id": "6a83daec88d81aa918ab8538",
+	"id": "incoai/Qwen3.8-27B-DFlash2",
+	"cardData": {
+		"license": "apache-2.0",
+		"library_name": "transformers",
+		"pipeline_tag": "text-generation",
+		"base_model": [
+			"Qwen/Qwen3.8-27B"
+		],
+		"inference": false,
+		"tags": [
+			"dflash2",
+			"speculative-decoding",
+			"block-diffusion",
+			"draft-model",
+			"sglang",
+			"vllm"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 1924404480
+		},
+		"total": 1924404480
+	}
+}

@@ -14,7 +14,7 @@
  *
  * Usage:
  *   pnpm --filter @huggingface/hub mock-hub
- *   pnpm --filter @huggingface/hub quant-variants -- Qwen/Qwen3.8-27B --hub-url http://localhost:8787
+ *   pnpm --filter @huggingface/hub quant-variants -- org/model --hub-url http://localhost:8787
  */
 
 import { createServer } from "node:http";
@@ -70,7 +70,25 @@ async function loadFixtures(fixturesDir?: string): Promise<{ models: ModelInfo[]
 		}
 	}
 
+	// The fixtures are ordered the way the Hub listed the repos in, so that the menu of the mock
+	// hub is the menu of the Hub, down to the order of the rows of the same size.
+	const order = await loadOrder(root);
+	const position = new Map(order.map((id, index) => [id, index]));
+	models.sort((a, b) => (position.get(a.id) ?? order.length) - (position.get(b.id) ?? order.length));
+
 	return { models, configs };
+}
+
+/**
+ * The order the Hub listed the repos in, as the dumper captured it.
+ */
+async function loadOrder(root: string): Promise<string[]> {
+	try {
+		const manifest = JSON.parse(await readFile(join(root, "manifest.json"), "utf8")) as { models?: string[] };
+		return manifest.models ?? [];
+	} catch {
+		return [];
+	}
 }
 
 /**
@@ -87,6 +105,23 @@ function hasBaseModel(model: ModelInfo, baseModel: string): boolean {
 
 function getAuthor(model: ModelInfo): string {
 	return model.author ?? model.id.split("/")[0];
+}
+
+/**
+ * The model the fixtures hold the variants of, if there is one.
+ *
+ * A variant declares the model it comes from in its `base_model` metadata, so the base model is
+ * the one the menu of the mock hub is about.
+ */
+function baseModelOf(models: ModelInfo[]): string | undefined {
+	const bases = new Set<string>();
+	for (const model of models) {
+		const base = model.cardData?.base_model;
+		for (const id of typeof base === "string" ? [base] : (base ?? [])) {
+			bases.add(id);
+		}
+	}
+	return bases.size === 1 ? [...bases][0] : undefined;
 }
 
 function listModels(models: ModelInfo[], url: URL): { models: Array<Record<string, unknown>>; total: number } {
@@ -235,7 +270,9 @@ async function main() {
 	console.log(`Mock hub listening on ${hub.url}`);
 	console.log(`Serving ${models.length} models: ${models.map((model) => model.id).join(", ")}`);
 	console.log("\nTry:");
-	console.log(`  pnpm --filter @huggingface/hub quant-variants -- Qwen/Qwen3.8-27B --hub-url ${hub.url}`);
+	console.log(
+		`  pnpm --filter @huggingface/hub quant-variants -- ${baseModelOf(models) ?? "<model>"} --hub-url ${hub.url}`,
+	);
 }
 
 if (require.main === module) {

@@ -1,0 +1,162 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1687
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "README.md",
+			"size": 9148
+		},
+		{
+			"rfilename": "assets/poster.jpg",
+			"size": 156609
+		},
+		{
+			"rfilename": "assets/tess-4.5-launch.mp4",
+			"size": 68687579
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 4312
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00001-of-00018.safetensors",
+			"size": 3966730520
+		},
+		{
+			"rfilename": "model-00002-of-00018.safetensors",
+			"size": 3043080296
+		},
+		{
+			"rfilename": "model-00003-of-00018.safetensors",
+			"size": 2542796928
+		},
+		{
+			"rfilename": "model-00004-of-00018.safetensors",
+			"size": 3988973120
+		},
+		{
+			"rfilename": "model-00005-of-00018.safetensors",
+			"size": 2099339832
+		},
+		{
+			"rfilename": "model-00006-of-00018.safetensors",
+			"size": 3979553664
+		},
+		{
+			"rfilename": "model-00007-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00008-of-00018.safetensors",
+			"size": 3979553664
+		},
+		{
+			"rfilename": "model-00009-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00010-of-00018.safetensors",
+			"size": 3979553664
+		},
+		{
+			"rfilename": "model-00011-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00012-of-00018.safetensors",
+			"size": 3979553664
+		},
+		{
+			"rfilename": "model-00013-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00014-of-00018.safetensors",
+			"size": 3979553664
+		},
+		{
+			"rfilename": "model-00015-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00016-of-00018.safetensors",
+			"size": 3979564008
+		},
+		{
+			"rfilename": "model-00017-of-00018.safetensors",
+			"size": 2108759312
+		},
+		{
+			"rfilename": "model-00018-of-00018.safetensors",
+			"size": 3392197320
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 112213
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 17928
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6ad510ae232ec4e5c18bd95b",
+	"id": "migtissera/Tess-4.5-27B",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": "Qwen/Qwen3.8-27B",
+		"base_model_relation": "finetune",
+		"library_name": "transformers",
+		"pipeline_tag": "image-text-to-text",
+		"language": [
+			"en"
+		],
+		"tags": [
+			"tess",
+			"agentic",
+			"coding",
+			"reasoning",
+			"tool-use",
+			"qwen3.8"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 27781427952
+		},
+		"total": 27781427952
+	}
+}

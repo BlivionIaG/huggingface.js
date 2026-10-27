@@ -1,0 +1,111 @@
+{
+	"siblings": [
+		{
+			"rfilename": ".gitattributes",
+			"size": 1570
+		},
+		{
+			"rfilename": "LICENSE",
+			"size": 11544
+		},
+		{
+			"rfilename": "NOTICE",
+			"size": 776
+		},
+		{
+			"rfilename": "README.md",
+			"size": 5747
+		},
+		{
+			"rfilename": "chat_template.jinja",
+			"size": 8952
+		},
+		{
+			"rfilename": "config.json",
+			"size": 114779
+		},
+		{
+			"rfilename": "generation_config.json",
+			"size": 202
+		},
+		{
+			"rfilename": "merges.txt",
+			"size": 3353259
+		},
+		{
+			"rfilename": "model-00001-of-00005.safetensors",
+			"size": 4746309984
+		},
+		{
+			"rfilename": "model-00002-of-00005.safetensors",
+			"size": 4746309408
+		},
+		{
+			"rfilename": "model-00003-of-00005.safetensors",
+			"size": 4746314576
+		},
+		{
+			"rfilename": "model-00004-of-00005.safetensors",
+			"size": 4746314568
+		},
+		{
+			"rfilename": "model-00005-of-00005.safetensors",
+			"size": 4746314552
+		},
+		{
+			"rfilename": "model.safetensors.index.json",
+			"size": 214890
+		},
+		{
+			"rfilename": "precision.svg",
+			"size": 237961
+		},
+		{
+			"rfilename": "preprocessor_config.json",
+			"size": 390
+		},
+		{
+			"rfilename": "tokenizer.json",
+			"size": 12809320
+		},
+		{
+			"rfilename": "tokenizer_config.json",
+			"size": 17928
+		},
+		{
+			"rfilename": "video_preprocessor_config.json",
+			"size": 385
+		},
+		{
+			"rfilename": "vocab.json",
+			"size": 6722759
+		}
+	],
+	"_id": "6ad919d0cc77ad9989ae6c56",
+	"id": "kaitchup/Qwen3.8-27B-SLQ-EAR98",
+	"cardData": {
+		"license": "apache-2.0",
+		"base_model": [
+			"Qwen/Qwen3.8-27B"
+		],
+		"base_model_relation": "quantized",
+		"pipeline_tag": "text-generation",
+		"tags": [
+			"qwen3_5",
+			"slq",
+			"mixed-precision",
+			"humming",
+			"vllm",
+			"gptq",
+			"autoround",
+			"quantization"
+		]
+	},
+	"safetensors": {
+		"parameters": {
+			"BF16": 3431363312,
+			"I32": 4063831040
+		},
+		"total": 7495194352
+	}
+}

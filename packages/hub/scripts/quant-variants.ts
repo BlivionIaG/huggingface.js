@@ -9,10 +9,10 @@
  * `pnpm --filter @huggingface/hub mock-hub` and pass `--hub-url http://localhost:8787`.
  *
  * Usage:
- *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B
- *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --hardware "RTX 4090"
- *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --html menu.html
- *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts Qwen/Qwen3.8-27B --hub-url http://localhost:8787
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --hardware "RTX 4090"
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --html menu.html
+ *   pnpm --filter @huggingface/hub exec tsx scripts/quant-variants.ts org/model --hub-url http://localhost:8787
  */
 
 import {
@@ -25,6 +25,9 @@ import {
 import { parseArgs } from "node:util";
 import { writeFile } from "node:fs/promises";
 import { listQuantVariants } from "../src/lib/list-quant-variants.js";
+import { stripArgumentSeparator } from "./args.js";
+
+stripArgumentSeparator();
 
 const { values, positionals } = parseArgs({
 	allowPositionals: true,
@@ -39,7 +42,13 @@ const { values, positionals } = parseArgs({
 	},
 });
 
-const model = positionals[0] ?? "Qwen/Qwen3.8-27B";
+const model = positionals[0];
+if (!model) {
+	console.error(
+		"Usage: pnpm --filter @huggingface/hub quant-variants -- <model> [--hardware <name>] [--memory <GB>] [--context <tokens>] [--all] [--limit <n>] [--hub-url <url>] [--html <file>]",
+	);
+	process.exit(1);
+}
 const contextLength = values.context ? Number(values.context) : undefined;
 
 interface Hardware {
