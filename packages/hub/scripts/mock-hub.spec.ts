@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { startMockHub, type MockHub } from "../../scripts/mock-hub";
-import { listQuantVariants } from "./list-quant-variants";
+import { startMockHub, type MockHub } from "./mock-hub";
+import { listQuantVariants } from "../src/lib/list-quant-variants";
 
 /**
  * The menu, read from a mock hub.

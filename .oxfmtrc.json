@@ -1,6 +1,7 @@
 {
 	"$schema": "./node_modules/oxfmt/configuration_schema.json",
-	"ignorePatterns": [],
+	// The fixtures of the mock hub are generated files, and are not formatted
+	"ignorePatterns": ["packages/hub/scripts/fixtures"],
 	"useTabs": true,
 	"printWidth": 120,
 	// Because tshy modifies the package.json file, the "exports" subprop

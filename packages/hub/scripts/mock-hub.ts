@@ -30,6 +30,7 @@ interface ModelInfo {
 	cardData?: { base_model?: string | string[] };
 	safetensors?: { parameters: Record<string, number>; total: number };
 	siblings: Array<{ rfilename: string; size?: number; blobId?: string }>;
+	tags?: string[];
 	[key: string]: unknown;
 }
 
